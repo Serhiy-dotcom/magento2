@@ -7,24 +7,46 @@
             max-width: 1920px;
             padding-left:0;
             padding-right:0;
+            .block{
+                margin-bottom:0;
+            }
         }
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+
+    .upon_all{
+        max-width:1350px;
+        margin: 0 auto;
+        padding:0 20px;
+    }
+
+    //----------------Main Banner---------------
     .baner {
         width: 100vw;
         max-width: 1920px;
         height: 75vh;
         max-height: 928px;
         background-color: @color-elogic-baner;
-        align-items: center;
-        display: flex;
+        .lib-vendor-box-align(center);
+        .lib-vendor-prefix-display(flex);
     }
     .container {
         margin: 0 auto;
         width: 60%;
-        display: flex;
+        .lib-vendor-prefix-display(flex);
         justify-content: space-between;
-        align-items: center;
+        .lib-vendor-box-align(center);
         max-width: 850px;
         img {
             width: 40%;
@@ -40,15 +62,15 @@
             display: none;
         }
         width: inherit;
-        display: flex;
-        flex-direction: column;
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-flex-direction(column);
         * {
-            font-family: 'Poppins', sans-serif;
+            font-family: @font-family__poppins;
         }
         h1 {
             text-transform: uppercase;
-            font-size: 35px;
-            letter-spacing: 2px;
+            .lib-font-size(35px);
+            letter-spacing: 0.2rem;
             font-weight: lighter;
             margin-bottom: 10px;
             span {
@@ -59,7 +81,7 @@
             text-transform: uppercase;
             text-decoration: none;
             cursor: pointer;
-            font-size: 15px;
+            .lib-font-size(15px);
             letter-spacing: 1px;
             color: @color-elogic-black;
             border-bottom: @color-elogic-black solid 1px;
@@ -73,7 +95,7 @@
             }
         }
         h6 {
-            font-size: 15px;
+            .lib-font-size(15px);
             color: @color-elogic-additional-info;
             letter-spacing: 1.1px;
             margin:0 0 30px 0;
@@ -87,102 +109,135 @@
 
 //  Desktop
 //  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl){
+    //----------------Main Banner---------------
+    .container{
+        width:80%;
+    }
 
+    .container_text {
+        h1{
+            .lib-font-size(33px);
+        }
+
+        h6{
+            .lib-font-size(15px);
+        }
+
+        a{
+            .lib-font-size(15px);
+        }
+    }
+
+    .container {
+        img{
+            width:70%;
+            max-width:600px;
+        }
+    }
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
+    //----------------Main Banner---------------
+    .container{
+        img{
+            width:45%;
+            max-width:400px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    //----------------Main Banner---------------
+    .container{
+        width: 65%;
+    }
+    .container_text {
+        h1 {
+            .lib-font-size(30px);
+        }
+        h6 {
+            .lib-font-size(12px);
+            letter-spacing: normal;
+        }
+        a {
+            .lib-font-size(12px);
+        }
+    }
+
+
+}
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    .column{
-        .widget{
-            .baner {
-                height: 450px;
-            }
-        }
+    //----------------Main Banner---------------
+    .baner {
+        height: 450px;
     }
-    .baner{
-        .container{
-            .container_text {
-                h6 {
-                    font-size: 10px;
-                    letter-spacing: normal;
-                }
-                a {
-                    font-size: 10px;
-                }
-            }
+    .container_text {
+        h1 {
+            .lib-font-size(23px);
+        }
+        h6 {
+            .lib-font-size(10px);
+            letter-spacing: normal;
+        }
+        a {
+            .lib-font-size(10px);
         }
     }
 
-    .widget{
-        .baner{
-            .container{
-                .container_text{
-                    h1 {
-                        font-size: 23px;
-                    }
-                }
-            }
-        }
-    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
-    .baner{
-        .container {
-            width: 80%;
+    //----------------Main Banner---------------
+    .container {
+        width: 80%;
+    }
+    .container_text {
+        h1 {
+            .lib-font-size(20px);
         }
     }
-    .baner{
-        .container{
-            .container_text {
-                h1 {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
+
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
-    .widget{
-        .baner {
-            height: 400px;
+    //----------------Main Banner---------------
+    .baner {
+        height: 400px;
+    }
+    .container {
+        img {
+            display: none;
         }
     }
-    .baner{
-        .container {
-            img {
-                display: none;
-            }
+    .container_text {
+        width: 100%;
+        .lib-vendor-box-align(center);
+        text-align: center;
+        img {
+            display: block;
+            width: 135px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        h6 {
+            margin-bottom: 0;
+        }
+        a {
+            margin-top: 20px;
         }
     }
-    .container{
-        .container_text {
-            width: 100%;
-            align-items: center;
-            text-align: center;
-            img {
-                display: block;
-                width: 135px;
-                margin-right: 10px;
-                margin-top: 20px;
-            }
-            h6 {
-                margin-bottom: 0;
-            }
-            a {
-                margin-top: 20px;
-            }
-        }
-    }
-
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
-    .container{
-        .container_text {
-            h1 {
-                font-size: 19px;
-                margin-bottom: 5px;
-            }
+    //----------------Main Banner---------------
+    .container_text {
+        h1 {
+            .lib-font-size(19px);
+            margin-bottom: 5px;
         }
     }
 }

@@ -37,16 +37,16 @@
         max-width: 1920px;
         height: 75vh;
         max-height: 928px;
-        background-color: #F3F3F3;
-        align-items: center;
-        display: flex;
+        background-color: @color-elogic-baner;
+        .lib-vendor-box-align(center);
+        .lib-vendor-prefix-display(flex);
     }
     .container {
         margin: 0 auto;
         width: 60%;
-        display: flex;
+        .lib-vendor-prefix-display(flex);
         justify-content: space-between;
-        align-items: center;
+        .lib-vendor-box-align(center);
         max-width: 850px;
         img {
             width: 40%;
@@ -62,15 +62,15 @@
             display: none;
         }
         width: inherit;
-        display: flex;
-        flex-direction: column;
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-flex-direction(column);
         * {
-            font-family: 'Poppins', sans-serif;
+            font-family: @font-family__poppins;
         }
         h1 {
             text-transform: uppercase;
-            font-size: 35px;
-            letter-spacing: 2px;
+            .lib-font-size(35px);
+            letter-spacing: 0.2rem;
             font-weight: lighter;
             margin-bottom: 10px;
             span {
@@ -81,22 +81,22 @@
             text-transform: uppercase;
             text-decoration: none;
             cursor: pointer;
-            font-size: 15px;
+            .lib-font-size(15px);
             letter-spacing: 1px;
-            color: #000;
-            border-bottom: #000 solid 1px;
+            color: @color-elogic-black;
+            border-bottom: @color-elogic-black solid 1px;
             width: max-content;
             padding-bottom: 3px;
             transition: all 0.15s linear;
             &:hover {
                 text-decoration: none;
-                color: #888888;
-                border-color: #888888;
+                color: @color-elogic-nav-hover;
+                border-color: @color-elogic-nav-hover;
             }
         }
         h6 {
-            font-size: 15px;
-            color: #a3a3a3;
+            .lib-font-size(15px);
+            color: @color-elogic-additional-info;
             letter-spacing: 1.1px;
             margin:0 0 30px 0;
             font-weight: 500;
@@ -113,14 +113,14 @@
         margin-top: 40px;
     }
     .categories_container {
-        display: flex;
+        .lib-vendor-prefix-display(flex);
         justify-content: space-between;
     }
     .cat_elem {
         width: 46%;
-        background-color: #F3F3F3;
+        background-color: @color-elogic-baner;
         padding: 0 40px 0 0;
-        display: flex;
+        .lib-vendor-prefix-display(flex);
         justify-content: space-between;
 
         img{
@@ -129,15 +129,15 @@
         }
     }
     .elem_textbox {
-        display: flex;
-        flex-direction: column;
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-flex-direction(column);
         height: inherit;
         justify-content: center;
         img {
             display: none;
         }
         * {
-            font-family: 'Poppins', sans-serif;
+            font-family: @font-family__poppins;
         }
         h1 {
             font-weight: 600;
@@ -150,27 +150,27 @@
         }
         p {
             font-style: italic;
-            color: #a3a3a3;
+            color: @color-elogic-additional-info;
             font-weight: normal;
-            font-size: 15px;
+            .lib-font-size(15px);
         }
         a {
             text-decoration: none;
             cursor: pointer;
-            font-size: 15px;
+            .lib-font-size(15px);
             font-weight: 500;
             letter-spacing: 1px;
-            color: #000;
+            color: @color-elogic-black;
             width: max-content;
-            border-bottom: #000 solid 1px;
+            border-bottom: @color-elogic-black solid 1px;
             text-transform: uppercase;
             padding-bottom: 3px;
             margin-top: 20px;
             transition: all 0.15s linear;
             &:hover {
                 text-decoration: none;
-                color: #888888;
-                border-color: #888888;
+                color: @color-elogic-nav-hover;
+                border-color: @color-elogic-nav-hover;
             }
         }
     }
@@ -189,15 +189,15 @@
 
     .container_text {
         h1{
-            font-size:33px;
+            .lib-font-size(33px);
         }
 
         h6{
-            font-size:15px;
+            .lib-font-size(15px);
         }
 
         a{
-            font-size:15px;
+            .lib-font-size(15px);
         }
     }
 
@@ -224,13 +224,13 @@
     //----------------Categories---------------
     .elem_textbox {
         h1 {
-            font-size: 28px;
+            .lib-font-size(28px);
         }
         p {
-            font-size: 13px;
+            .lib-font-size(13px);
         }
         a {
-            font-size: 13px;
+            .lib-font-size(13px);
         }
     }
 }
@@ -242,14 +242,14 @@
     }
     .container_text {
         h1 {
-            font-size: 30px;
+            .lib-font-size(30px);
         }
         h6 {
-            font-size: 12px;
+            .lib-font-size(12px);
             letter-spacing: normal;
         }
         a {
-            font-size: 12px;
+            .lib-font-size(12px);
         }
     }
 
@@ -261,14 +261,14 @@
     }
     .elem_textbox {
         h1 {
-            font-size: 22px;
+            .lib-font-size(22px);
             margin-bottom:0;
         }
         p {
-            font-size: 12px;
+            .lib-font-size(12px);
         }
         a {
-            font-size: 12px;
+            .lib-font-size(12px);
         }
     }
 
@@ -282,14 +282,14 @@
     }
     .container_text {
         h1 {
-            font-size: 23px;
+            .lib-font-size(23px);
         }
         h6 {
-            font-size: 10px;
+            .lib-font-size(10px);
             letter-spacing: normal;
         }
         a {
-            font-size: 10px;
+            .lib-font-size(10px);
         }
     }
 
@@ -302,13 +302,13 @@
     }
     .elem_textbox {
         h1 {
-            font-size: 18px;
+            .lib-font-size(18px);
         }
         p {
-            font-size: 10px;
+            .lib-font-size(10px);
         }
         a {
-            font-size: 10px;
+            .lib-font-size(10px);
         }
     }
 
@@ -322,7 +322,7 @@
     }
     .container_text {
         h1 {
-            font-size: 20px;
+            .lib-font-size(20px);
         }
     }
 
@@ -330,8 +330,8 @@
 
     //----------------Categories---------------
     .categories_container {
-        flex-direction: column;
-        align-items: center;
+        .lib-vendor-prefix-flex-direction(column);
+        .lib-vendor-box-align(center);
     }
     .cat_elem {
         padding: 0 15px 10px 0;
@@ -356,7 +356,7 @@
     }
     .container_text {
         width: 100%;
-        align-items: center;
+        .lib-vendor-box-align(center);
         text-align: center;
         img {
             display: block;
@@ -408,7 +408,7 @@
     //----------------Main Banner---------------
     .container_text {
         h1 {
-            font-size: 19px;
+            .lib-font-size(19px);
             margin-bottom: 5px;
         }
     }

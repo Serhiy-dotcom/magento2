@@ -1,0 +1,138 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Variables
+//  _____________________________________________
+
+@product-name-link__color: @text__color;
+@product-name-link__color__active: @text__color;
+@product-name-link__color__hover: @text__color;
+@product-name-link__color__visited: @text__color;
+
+@product-name-link__text-decoration: none;
+@product-name-link__text-decoration__active: @link__hover__text-decoration;
+@product-name-link__text-decoration__hover: @link__hover__text-decoration;
+@product-name-link__text-decoration__visited: @link__hover__text-decoration;
+
+@product-item__hover__background-color: @color-white;
+@product-item__hover__box-shadow: 3px 4px 4px 0 rgba(0, 0, 0, .3);
+
+@product-price__muted__color: @color-gray40;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    //  Product Lists
+    .product-items{
+        .lib-vendor-prefix-display(flex);
+        justify-content: space-between;
+        .lib-vendor-prefix-flex-wrap(wrap);
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .product-item{
+        text-align:center;
+        width: 21%;
+        min-width: 210px;
+        height: max-content;
+        padding: 0 10px;
+
+        a{
+            display: inline-block;
+            width: 100%;
+
+            .product-image-container{
+                width:100% !important;
+            }
+        }
+    }
+
+    .product-image-wrapper{
+        .product-image-photo{
+            width: 100%;
+        }
+    }
+
+    .product-item-details{
+        margin: 20px 0 0;
+        text-align: center;
+    }
+
+    .product-item-link,
+    .product-item-link:visited{
+        text-transform: uppercase;
+        color: @color-elogic-icon-gray;
+        font-family: @font-family__poppins;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        text-decoration:none;
+        transition:all 0.2s linear;
+    }
+
+    .product-item-link:hover{
+        color:@color-elogic-black;
+        text-decoration:none;
+    }
+
+    .price-label{
+        display:none;
+    }
+
+    .price-box{
+        margin-top: 8px;
+    }
+
+    .price-box{
+        span{
+            font-family: @font-family__oswald;
+        }
+
+        .special-price{
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .old-price{
+            color:@color-elogic-bold-gray;
+            text-decoration: line-through;
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+
+
+    .actions-secondary{
+        display:none;
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+
+}

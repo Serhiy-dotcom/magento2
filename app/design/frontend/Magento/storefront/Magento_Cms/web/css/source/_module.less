@@ -1,0 +1,423 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    .page-wrapper{
+        .page-main{
+            max-width: 1920px;
+            padding-left:0;
+            padding-right:0;
+            .block{
+                margin-bottom:0;
+            }
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+
+    .upon_all{
+        max-width:1350px;
+        margin: 0 auto;
+        padding:0 20px;
+    }
+
+    //----------------Main Banner---------------
+    .baner {
+        width: 100vw;
+        max-width: 1920px;
+        height: 75vh;
+        max-height: 928px;
+        background-color: @color-elogic-baner;
+        .lib-vendor-box-align(center);
+        .lib-vendor-prefix-display(flex);
+    }
+    .container {
+        margin: 0 auto;
+        width: 60%;
+        .lib-vendor-prefix-display(flex);
+        justify-content: space-between;
+        .lib-vendor-box-align(center);
+        max-width: 850px;
+        img {
+            width: 40%;
+            height: max-content;
+            max-width: 300px;
+        }
+    }
+    .container_text {
+        img {
+            width: 40%;
+            height: max-content;
+            max-width: 300px;
+            display: none;
+        }
+        width: inherit;
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-flex-direction(column);
+        * {
+            font-family: @font-family__poppins;
+        }
+        h1 {
+            text-transform: uppercase;
+            .lib-font-size(35px);
+            letter-spacing: 0.2rem;
+            font-weight: lighter;
+            margin-bottom: 10px;
+            span {
+                font-weight: 600;
+            }
+        }
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            .lib-font-size(15px);
+            letter-spacing: 1px;
+            color: @color-elogic-black;
+            border-bottom: @color-elogic-black solid 1px;
+            width: max-content;
+            padding-bottom: 3px;
+            transition: all 0.15s linear;
+            &:hover {
+                text-decoration: none;
+                color: @color-elogic-nav-hover;
+                border-color: @color-elogic-nav-hover;
+            }
+        }
+        h6 {
+            .lib-font-size(15px);
+            color: @color-elogic-additional-info;
+            letter-spacing: 1.1px;
+            margin:0 0 30px 0;
+            font-weight: 500;
+        }
+    }
+
+
+
+
+    //----------------Categories---------------
+    .categories {
+        width: 100vw;
+        max-width: 1920px;
+        margin-top: 40px;
+    }
+    .categories_container {
+        .lib-vendor-prefix-display(flex);
+        justify-content: space-between;
+    }
+    .cat_elem {
+        width: 46%;
+        background-color: @color-elogic-baner;
+        padding: 0 40px 0 0;
+        .lib-vendor-prefix-display(flex);
+        justify-content: space-between;
+
+        img{
+            width: 70%;
+            height: max-content;
+        }
+    }
+    .elem_textbox {
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-flex-direction(column);
+        height: inherit;
+        justify-content: center;
+        img {
+            display: none;
+        }
+        * {
+            font-family: @font-family__poppins;
+        }
+        h1 {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-bottom:5px;
+            span {
+                font-weight: 300;
+            }
+        }
+        p {
+            font-style: italic;
+            color: @color-elogic-additional-info;
+            font-weight: normal;
+            .lib-font-size(15px);
+        }
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            .lib-font-size(15px);
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: @color-elogic-black;
+            width: max-content;
+            border-bottom: @color-elogic-black solid 1px;
+            text-transform: uppercase;
+            padding-bottom: 3px;
+            margin-top: 20px;
+            transition: all 0.15s linear;
+            &:hover {
+                text-decoration: none;
+                color: @color-elogic-nav-hover;
+                border-color: @color-elogic-nav-hover;
+            }
+        }
+    }
+
+}
+
+
+
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl){
+    //----------------Main Banner---------------
+    .container{
+        width:80%;
+    }
+
+    .container_text {
+        h1{
+            .lib-font-size(33px);
+        }
+
+        h6{
+            .lib-font-size(15px);
+        }
+
+        a{
+            .lib-font-size(15px);
+        }
+    }
+
+    .container {
+        img{
+            width:70%;
+            max-width:600px;
+        }
+    }
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
+    //----------------Main Banner---------------
+    .container{
+        img{
+            width:45%;
+            max-width:400px;
+        }
+    }
+
+
+    //----------------Categories---------------
+    .elem_textbox {
+        h1 {
+            .lib-font-size(28px);
+        }
+        p {
+            .lib-font-size(13px);
+        }
+        a {
+            .lib-font-size(13px);
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    //----------------Main Banner---------------
+    .container{
+        width: 65%;
+    }
+    .container_text {
+        h1 {
+            .lib-font-size(30px);
+        }
+        h6 {
+            .lib-font-size(12px);
+            letter-spacing: normal;
+        }
+        a {
+            .lib-font-size(12px);
+        }
+    }
+
+
+
+    //----------------Categories---------------
+    .cat_elem {
+        padding: 0 20px 20px 0;
+    }
+    .elem_textbox {
+        h1 {
+            .lib-font-size(22px);
+            margin-bottom:0;
+        }
+        p {
+            .lib-font-size(12px);
+        }
+        a {
+            .lib-font-size(12px);
+        }
+    }
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    //----------------Main Banner---------------
+    .baner {
+        height: 450px;
+    }
+    .container_text {
+        h1 {
+            .lib-font-size(23px);
+        }
+        h6 {
+            .lib-font-size(10px);
+            letter-spacing: normal;
+        }
+        a {
+            .lib-font-size(10px);
+        }
+    }
+
+
+
+
+    //----------------Categories---------------
+    .cat_elem {
+        padding: 0 15px 10px 0;
+    }
+    .elem_textbox {
+        h1 {
+            .lib-font-size(18px);
+        }
+        p {
+            .lib-font-size(10px);
+        }
+        a {
+            .lib-font-size(10px);
+        }
+    }
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    //----------------Main Banner---------------
+    .container {
+        width: 80%;
+    }
+    .container_text {
+        h1 {
+            .lib-font-size(20px);
+        }
+    }
+
+
+
+    //----------------Categories---------------
+    .categories_container {
+        .lib-vendor-prefix-flex-direction(column);
+        .lib-vendor-box-align(center);
+    }
+    .cat_elem {
+        padding: 0 15px 10px 0;
+        width: 65%;
+        &:first-child {
+            margin-bottom: 20px;
+        }
+    }
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    //----------------Main Banner---------------
+    .baner {
+        height: 400px;
+    }
+    .container {
+        img {
+            display: none;
+        }
+    }
+    .container_text {
+        width: 100%;
+        .lib-vendor-box-align(center);
+        text-align: center;
+        img {
+            display: block;
+            width: 135px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        h6 {
+            margin-bottom: 0;
+        }
+        a {
+            margin-top: 20px;
+        }
+    }
+
+
+
+
+    //----------------Categories---------------
+    .cat_elem {
+        img {
+            display: none;
+        }
+    }
+    .elem_textbox {
+        text-align: center;
+        padding: 20px;
+        a {
+            margin: 15px auto 0;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .lamp {
+        img {
+            margin-top: 30px;
+        }
+        .elem_textbox {
+            padding-bottom: 0;
+        }
+    }
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
+    //----------------Main Banner---------------
+    .container_text {
+        h1 {
+            .lib-font-size(19px);
+            margin-bottom: 5px;
+        }
+    }
+
+
+
+
+    //----------------Categories---------------
+    .cat_elem{
+        width:93%;
+    }
+}

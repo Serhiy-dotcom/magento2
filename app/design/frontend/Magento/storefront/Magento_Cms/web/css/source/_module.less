@@ -240,6 +240,59 @@
             font-weight: lighter;
         }
     }
+
+
+
+
+    //----------------November Sale---------------
+    .sale {
+        max-width: 1920px;
+        padding: 0 20px;
+    }
+    .sale_bg {
+        height: 146px;
+        max-width: 1310px;
+        background-size: cover;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.05)), url("https://i.ibb.co/Qms181R/Screenshot-2021-07-30-at-12-16-18-kare-k83990-624068820-800x800w-jpg-JPEG-Image-699-800-pixels.png");
+        background-position-y: -285px;
+    }
+    .sale_text {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        height: 100%;
+        align-items: center;
+        width: 85%;
+        text-transform: uppercase;
+        font-family: 'Poppins';
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #000;
+            width: max-content;
+            border-bottom: #000 solid 1px;
+            text-transform: uppercase;
+            padding-bottom: 3px;
+            transition: all 0.15s linear;
+            &:hover {
+                text-decoration: none;
+                color: #888888;
+                border-color: #888888;
+            }
+        }
+    }
+    .sale_info {
+        h2 {
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        h4 {
+            font-weight: 300;
+        }
+    }
 }
 
 
@@ -309,6 +362,28 @@
             left:5px;
         }
     }
+
+
+
+    //----------------November Sale---------------
+    .sale_bg {
+        background-position-y: -285px;
+        height: 146px;
+    }
+    .sale_text {
+        width: 85%;
+        a {
+            font-size: 15px;
+        }
+    }
+    .sale_info {
+        h2 {
+            font-size: 24px;
+        }
+        h4 {
+            font-size: 16px;
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
@@ -357,6 +432,28 @@
             left:15px;
         }
     }
+
+
+    //----------------November Sale---------------
+    .sale_bg {
+        height: 120px;
+        background-position-y: -180px;
+    }
+    .sale_text {
+        width: 90%;
+        a {
+            font-size: 12px;
+        }
+    }
+    .sale_info {
+        h2 {
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 12px;
+        }
+    }
+
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
@@ -408,6 +505,27 @@
 
         h2{
             .lib-font-size(20px);
+        }
+    }
+
+
+    //----------------November Sale---------------
+    .sale_bg {
+        height: 120px;
+        background-position-y: -120px;
+    }
+    .sale_text {
+        width: 90%;
+        a {
+            font-size: 11px;
+        }
+    }
+    .sale_info {
+        h2 {
+            font-size: 17px;
+        }
+        h4 {
+            font-size: 11px;
         }
     }
 }
@@ -525,6 +643,35 @@
             left:25px;
         }
     }
+
+
+    //----------------November Sale---------------
+    .sale_bg {
+        background-position: top;
+        height: 250px;
+    }
+    .sale_text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        a {
+            font-size: 13px;
+        }
+    }
+    .sale_info {
+        margin-bottom: 47px;
+        h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        h4 {
+            font-size: 13px;
+        }
+    }
+
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
@@ -542,5 +689,33 @@
     //----------------Categories---------------
     .cat_elem{
         width:93%;
+    }
+
+
+    //----------------November Sale---------------
+    .sale_bg {
+        background-position: top;
+        height: 323px;
+    }
+    .sale_text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        a {
+            font-size: 11px;
+        }
+    }
+    .sale_info {
+        margin-bottom: 75px;
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        h4 {
+            font-size: 11px;
+        }
     }
 }

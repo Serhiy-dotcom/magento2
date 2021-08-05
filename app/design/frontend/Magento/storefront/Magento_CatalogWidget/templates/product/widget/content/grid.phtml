@@ -46,7 +46,7 @@ use Magento\Framework\App\Action\Action;
                         <?= /* @noEscape */ ($iterator++ == 1) ? '<li class="product-item">' : '</li><li class="product-item">' ?>
                         <div class="product-item-info">
                             <?php
-                            $productImage = $block->getImage($_item, $image);
+                            $productImage = $block->getImage($_item, $image, ['class' => 'photo-currently-hovered']);
                             $productImageHover = $_imageHelper->init($_item, $_imageHover);
                             if ($pos != null) {
                                 $position = ' style="left:' . $productImage->getWidth() . 'px;'

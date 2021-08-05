@@ -2,6 +2,7 @@
 //  Common
 //  _____________________________________________
 & when (@media-common = true) {
+    //--------------Common-------------
     .page-wrapper{
         .page-main{
             max-width: 1920px;
@@ -294,6 +295,33 @@
             font-weight: 300;
         }
     }
+
+
+
+    //------Bestsellers/Features/Most Viewed------
+    .products_group {
+        .lib-vendor-prefix-display(flex);
+        justify-content: space-between;
+        margin-top: 90px;
+        .lib-vendor-prefix-flex-wrap(wrap);
+    }
+    .group_item {
+        width: 32%;
+    }
+
+    .group_item_header{
+        text-transform: uppercase;
+        .lib-font-size(17px);
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .group_item_content {
+        border-top: 1px solid @color-elogic-border-gray;
+        margin-top: 20px;
+        padding-top: 35px;
+    }
+
 }
 
 
@@ -328,10 +356,17 @@
     }
 
 
-
+    //------Bestsellers/Features/Most Viewed------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
+    //--------------Common-------------
+    .upon_all{
+        padding:0 20px;
+    }
+
+
+
     //----------------Main Banner---------------
     .container{
         img{
@@ -364,9 +399,17 @@
         }
     }
 
+    .product_slider_btns{
+        right:20px;
+    }
+
 
 
     //----------------November Sale---------------
+    .sale{
+        padding:0 20px;
+    }
+
     .sale_bg {
         background-position-y: -285px;
         height: 146px;
@@ -385,9 +428,27 @@
             .lib-font-size(16px);
         }
     }
+
+
+
+    //------Bestsellers/Features/Most Viewed------
+    .group_item{
+        width:32%;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    //--------------Common-------------
+    .upon_all{
+        padding:0 80px;
+    }
+
+    .product_slider_btns{
+        right:70px;
+    }
+
+
+
     //----------------Main Banner---------------
     .container{
         width: 65%;
@@ -426,16 +487,13 @@
 
 
     //----------------Our Products---------------
-    .products_header{
-        padding: 0 0 0 15px;
-
-        &::after{
-            left:15px;
-        }
-    }
 
 
     //----------------November Sale---------------
+    .sale{
+        padding:0 80px;
+    }
+
     .sale_bg {
         height: 120px;
         background-position-y: -180px;
@@ -455,9 +513,27 @@
         }
     }
 
+
+
+
+    //------Bestsellers/Features/Most Viewed------
+    .group_item{
+        width:100%;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    //--------------Common-------------
+    .upon_all{
+        padding:0 20px;
+    }
+
+    .product_slider_btns{
+        right:10px;
+    }
+
+
+
     //----------------Main Banner---------------
     .baner {
         height: 450px;
@@ -498,11 +574,6 @@
     //----------------Our Products---------------
     .products_header{
         height:75px;
-        padding: 0 0 0 10px;
-
-        &::after{
-            left:10px;
-        }
 
         h2{
             .lib-font-size(20px);
@@ -511,6 +582,10 @@
 
 
     //----------------November Sale---------------
+    .sale{
+        padding: 0 20px;
+    }
+
     .sale_bg {
         height: 120px;
         background-position-y: -120px;
@@ -528,6 +603,14 @@
         h4 {
             .lib-font-size(11px);
         }
+    }
+
+
+
+
+    //------Bestsellers/Features/Most Viewed------
+    .group_item{
+        width:100%;
     }
 }
 
@@ -565,12 +648,17 @@
     }
 
     .products_header{
-        padding: 0 0 0 40px;
+        padding: 0 0 0 35px;
 
         &::after{
-            left:40px;
+            left:35px;
         }
     }
+
+
+
+
+    //------Bestsellers/Features/Most Viewed------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
@@ -673,6 +761,10 @@
         }
     }
 
+
+
+    //------Bestsellers/Features/Most Viewed------
+
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
@@ -719,4 +811,9 @@
             .lib-font-size(11px);
         }
     }
+
+
+
+
+    //------Bestsellers/Features/Most Viewed------
 }

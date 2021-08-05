@@ -322,6 +322,50 @@
         padding-top: 35px;
     }
 
+
+
+    //----------------News & Blog---------------
+    .news_blog{
+        .products_header{
+            padding:0;
+
+            &::after{
+                left:0;
+            }
+        }
+    }
+
+    .news{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+    }
+
+    .news_item{
+        width: 32%;
+
+        h4{
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        p{
+            color: #a3a3a3;
+            letter-spacing: .25px;
+        }
+    }
+
+    .news_date{
+        font-style: italic;
+        color: #a3a3a3;
+        font-size: 13px;
+        margin-bottom: 15px;
+
+        .far.fa-calendar-alt{
+            font-size: 15px;
+            margin-right: 8px;
+        }
+    }
 }
 
 
@@ -357,6 +401,10 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+    //----------------News & Blog---------------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
@@ -434,6 +482,13 @@
     //------Bestsellers/Features/Most Viewed------
     .group_item{
         width:32%;
+    }
+
+
+
+    //----------------News & Blog---------------
+    .news_item {
+        width: 32%;
     }
 }
 
@@ -519,6 +574,13 @@
     //------Bestsellers/Features/Most Viewed------
     .group_item{
         width:100%;
+    }
+
+
+
+    //----------------News & Blog---------------
+    .news_item {
+        width: 48%;
     }
 }
 
@@ -612,6 +674,13 @@
     .group_item{
         width:100%;
     }
+
+
+
+    //----------------News & Blog---------------
+    .news_item {
+        width: 48%;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
@@ -659,6 +728,10 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+    //----------------News & Blog---------------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
@@ -765,6 +838,12 @@
 
     //------Bestsellers/Features/Most Viewed------
 
+
+
+    //----------------News & Blog---------------
+    .news_item {
+        width: 100%;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
@@ -816,4 +895,9 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+
+    //----------------News & Blog---------------
 }

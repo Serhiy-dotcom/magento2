@@ -28,8 +28,8 @@
 
     .upon_all{
         max-width:1350px;
-        margin: 40px auto 0;
-        padding:0 20px;
+        margin: @indent__xl auto 0;
+        padding:0 @indent__base;
     }
 
     //Slider buttons
@@ -46,13 +46,13 @@
     .slider_btns a{
         text-decoration: none;
         text-transform: uppercase;
-        font-family:'Poppins', sans-serif;
+        font-family:@font-family__poppins;
         font-weight: lighter;
         cursor:pointer;
         color:@color-elogic-black;
         width:50%;
         text-align:center;
-        .lib-font-size(13px);
+        .lib-font-size(@font-size-average);
     }
 
     .slider_btns a:first-child{
@@ -100,16 +100,16 @@
             .lib-font-size(35px);
             letter-spacing: 0.2rem;
             font-weight: lighter;
-            margin-bottom: 10px;
+            margin-bottom: @indent__s;
             span {
-                font-weight: 600;
+                font-weight: @font-weight__semibold;
             }
         }
         a {
             text-transform: uppercase;
             text-decoration: none;
             cursor: pointer;
-            .lib-font-size(15px);
+            .lib-font-size(@font-size-medium);
             letter-spacing: 1px;
             color: @color-elogic-black;
             border-bottom: @color-elogic-black solid 1px;
@@ -123,11 +123,11 @@
             }
         }
         h6 {
-            .lib-font-size(15px);
+            .lib-font-size(@font-size-medium);
             color: @color-elogic-additional-info;
             letter-spacing: 1.1px;
-            margin:0 0 30px 0;
-            font-weight: 500;
+            margin:0 0 @indent__l 0;
+            font-weight: @font-weight__medium;
         }
     }
 
@@ -146,7 +146,7 @@
     .cat_elem {
         width: 46%;
         background-color: @color-elogic-baner;
-        padding: 0 40px 0 0;
+        padding: 0 @indent__xl 0 0;
         .lib-vendor-prefix-display(flex);
         justify-content: space-between;
 
@@ -167,32 +167,32 @@
             font-family: @font-family__poppins;
         }
         h1 {
-            font-weight: 600;
+            font-weight: @font-weight__semibold;
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding-bottom:5px;
+            padding-bottom:@indent__xs;
             span {
-                font-weight: 300;
+                font-weight: @font-weight__lighter;
             }
         }
         p {
             font-style: italic;
             color: @color-elogic-additional-info;
             font-weight: normal;
-            .lib-font-size(15px);
+            .lib-font-size(@font-size-medium);
         }
         a {
             text-decoration: none;
             cursor: pointer;
-            .lib-font-size(15px);
-            font-weight: 500;
+            .lib-font-size(@font-size-medium);
+            font-weight: @font-weight__medium;
             letter-spacing: 1px;
             color: @color-elogic-black;
             width: max-content;
             border-bottom: @color-elogic-black solid 1px;
             text-transform: uppercase;
             padding-bottom: 3px;
-            margin-top: 20px;
+            margin-top: @indent__base;
             transition: all 0.15s linear;
             &:hover {
                 text-decoration: none;
@@ -206,7 +206,7 @@
 
     .our_products{
         position:relative;
-        margin-top:90px;
+        margin-top:@indent__l * 3;
     }
 
     .product_slider_btns{
@@ -214,9 +214,9 @@
     }
 
     .products_header{
-        padding: 0 0 0 5px;
+        padding: 0 0 0 @indent__xs;
         text-transform: uppercase;
-        margin-bottom:30px;
+        margin-bottom:@indent__l;
         position: relative;
         height: 80px;
 
@@ -231,13 +231,13 @@
         }
 
         h2{
-            font-weight: 600;
+            font-weight: @font-weight__semibold;
             margin: 0;
         }
 
         h4{
             color:@color-elogic-additional-info;
-            margin: 10px 0;
+            margin: @indent__s 0;
             font-weight: lighter;
         }
     }
@@ -248,8 +248,8 @@
     //----------------November Sale---------------
     .sale {
         max-width: 1920px;
-        padding: 0 20px;
-        margin-top: 90px;
+        padding: 0 @indent__base;
+        margin-top: @indent__l * 3;
     }
     .sale_bg {
         height: 146px;
@@ -270,8 +270,8 @@
         a {
             text-decoration: none;
             cursor: pointer;
-            .lib-font-size(15px);
-            font-weight: 500;
+            .lib-font-size(@font-size-medium);
+            font-weight: @font-weight__medium;
             letter-spacing: 1px;
             color: @color-elogic-black;
             width: max-content;
@@ -288,11 +288,11 @@
     }
     .sale_info {
         h2 {
-            font-weight: 600;
+            font-weight: @font-weight__semibold;
             letter-spacing: 1px;
         }
         h4 {
-            font-weight: 300;
+            font-weight: @font-weight__lighter;
         }
     }
 
@@ -302,7 +302,7 @@
     .products_group {
         .lib-vendor-prefix-display(flex);
         justify-content: space-between;
-        margin-top: 90px;
+        margin-top: @indent__l * 3;
         .lib-vendor-prefix-flex-wrap(wrap);
     }
     .group_item {
@@ -312,13 +312,13 @@
     .group_item_header{
         text-transform: uppercase;
         .lib-font-size(17px);
-        font-weight: 600;
+        font-weight: @font-weight__semibold;
         letter-spacing: 1px;
     }
 
     .group_item_content {
         border-top: 1px solid @color-elogic-border-gray;
-        margin-top: 20px;
+        margin-top: @indent__s * 2;
         padding-top: 35px;
     }
 
@@ -340,11 +340,11 @@
         }
 
         h6{
-            .lib-font-size(15px);
+            .lib-font-size(@font-size-medium);
         }
 
         a{
-            .lib-font-size(15px);
+            .lib-font-size(@font-size-medium);
         }
     }
 
@@ -362,7 +362,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
     //--------------Common-------------
     .upon_all{
-        padding:0 20px;
+        padding:0 @indent__base;
     }
 
 
@@ -382,17 +382,17 @@
             .lib-font-size(28px);
         }
         p {
-            .lib-font-size(13px);
+            .lib-font-size(@font-size-average);
         }
         a {
-            .lib-font-size(13px);
+            .lib-font-size(@font-size-average);
         }
     }
 
 
     //----------------Our Products---------------
     .products_header{
-        padding:0 0 0 5px;
+        padding:0 0 0 @indent__xs;
 
         &::after{
             left:5px;
@@ -407,7 +407,7 @@
 
     //----------------November Sale---------------
     .sale{
-        padding:0 20px;
+        padding:0 @indent__base;
     }
 
     .sale_bg {
@@ -417,7 +417,7 @@
     .sale_text {
         width: 85%;
         a {
-            .lib-font-size(15px);
+            .lib-font-size(@font-size-medium);
         }
     }
     .sale_info {
@@ -440,7 +440,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
     //--------------Common-------------
     .upon_all{
-        padding:0 80px;
+        padding:0 @indent__xl * 2;
     }
 
     .product_slider_btns{
@@ -458,11 +458,11 @@
             .lib-font-size(30px);
         }
         h6 {
-            .lib-font-size(12px);
+            .lib-font-size(@font-size__s);
             letter-spacing: normal;
         }
         a {
-            .lib-font-size(12px);
+            .lib-font-size(@font-size__s);
         }
     }
 
@@ -470,7 +470,7 @@
 
     //----------------Categories---------------
     .cat_elem {
-        padding: 0 20px 20px 0;
+        padding: 0 @indent__base @indent__base 0;
     }
     .elem_textbox {
         h1 {
@@ -478,10 +478,10 @@
             margin-bottom:0;
         }
         p {
-            .lib-font-size(12px);
+            .lib-font-size(@font-size__s);
         }
         a {
-            .lib-font-size(12px);
+            .lib-font-size(@font-size__s);
         }
     }
 
@@ -491,7 +491,7 @@
 
     //----------------November Sale---------------
     .sale{
-        padding:0 80px;
+        padding:0 @indent__xl * 2;
     }
 
     .sale_bg {
@@ -501,15 +501,15 @@
     .sale_text {
         width: 90%;
         a {
-            .lib-font-size(12px);
+            .lib-font-size(@font-size__s);
         }
     }
     .sale_info {
         h2 {
-            .lib-font-size(18px);
+            .lib-font-size(@font-size__l);
         }
         h4 {
-            .lib-font-size(12px);
+            .lib-font-size(@font-size__s);
         }
     }
 
@@ -525,7 +525,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     //--------------Common-------------
     .upon_all{
-        padding:0 20px;
+        padding:0 @indent__base;
     }
 
     .product_slider_btns{
@@ -543,11 +543,11 @@
             .lib-font-size(23px);
         }
         h6 {
-            .lib-font-size(10px);
+            .lib-font-size(@font-size-small);
             letter-spacing: normal;
         }
         a {
-            .lib-font-size(10px);
+            .lib-font-size(@font-size-small);
         }
     }
 
@@ -556,17 +556,17 @@
 
     //----------------Categories---------------
     .cat_elem {
-        padding: 0 15px 10px 0;
+        padding: 0 @indent__xs * 3 @indent__s 0;
     }
     .elem_textbox {
         h1 {
-            .lib-font-size(18px);
+            .lib-font-size(@font-size__l);
         }
         p {
-            .lib-font-size(10px);
+            .lib-font-size(@font-size-small);
         }
         a {
-            .lib-font-size(10px);
+            .lib-font-size(@font-size-small);
         }
     }
 
@@ -576,14 +576,14 @@
         height:75px;
 
         h2{
-            .lib-font-size(20px);
+            .lib-font-size(@font-size-large);
         }
     }
 
 
     //----------------November Sale---------------
     .sale{
-        padding: 0 20px;
+        padding: 0 @indent__base;
     }
 
     .sale_bg {
@@ -593,7 +593,7 @@
     .sale_text {
         width: 90%;
         a {
-            .lib-font-size(11px);
+            .lib-font-size(@font-size__xs);
         }
     }
     .sale_info {
@@ -601,7 +601,7 @@
             .lib-font-size(17px);
         }
         h4 {
-            .lib-font-size(11px);
+            .lib-font-size(@font-size__xs);
         }
     }
 
@@ -621,7 +621,7 @@
     }
     .container_text {
         h1 {
-            .lib-font-size(20px);
+            .lib-font-size(@font-size-large);
         }
     }
 
@@ -633,10 +633,10 @@
         .lib-vendor-box-align(center);
     }
     .cat_elem {
-        padding: 0 15px 10px 0;
+        padding: 0 @indent__xs * 3 @indent__s 0;
         width: 85%;
         &:first-child {
-            margin-bottom: 20px;
+            margin-bottom: @indent__s * 2;
         }
     }
 
@@ -678,14 +678,14 @@
         img {
             display: block;
             width: 135px;
-            margin-right: 10px;
-            margin-top: 20px;
+            margin-right: @indent__s;
+            margin-top: @indent__s * 2;
         }
         h6 {
             margin-bottom: 0;
         }
         a {
-            margin-top: 20px;
+            margin-top: @indent__s * 2;
         }
     }
 
@@ -700,9 +700,9 @@
     }
     .elem_textbox {
         text-align: center;
-        padding: 40px 20px;
+        padding: @indent__xl @indent__base;
         a {
-            margin: 15px auto 0;
+            margin: @indent__xs * 3 auto 0;
         }
         img {
             display: block;
@@ -711,7 +711,7 @@
     }
     .lamp {
         img {
-            margin-top: 30px;
+            margin-top: @indent__l;
         }
         .elem_textbox {
             padding-bottom: 0;
@@ -726,7 +726,7 @@
     }
 
     .products_header{
-        padding: 0 0 0 25px;
+        padding: 0 0 0 @indent__m;
 
         &::after{
             left:25px;
@@ -747,17 +747,17 @@
         .lib-vendor-box-align(center);
         text-align: center;
         a {
-            .lib-font-size(13px);
+            .lib-font-size(@font-size-average);
         }
     }
     .sale_info {
         margin-bottom: 47px;
         h2 {
-            .lib-font-size(20px);
-            margin-bottom: 5px;
+            .lib-font-size(@font-size-large);
+            margin-bottom: @indent__xs;
         }
         h4 {
-            .lib-font-size(13px);
+            .lib-font-size(@font-size-average);
         }
     }
 
@@ -772,7 +772,7 @@
     .container_text {
         h1 {
             .lib-font-size(19px);
-            margin-bottom: 5px;
+            margin-bottom: @indent__xs;
         }
     }
 
@@ -798,17 +798,17 @@
         .lib-vendor-box-align(center);
         text-align: center;
         a {
-            .lib-font-size(11px);
+            .lib-font-size(@font-size__xs);
         }
     }
     .sale_info {
-        margin-bottom: 75px;
+        margin-bottom: @indent__m * 3;
         h2 {
-            .lib-font-size(18px);
-            margin-bottom: 5px;
+            .lib-font-size(@font-size__l);
+            margin-bottom: @indent__xs;
         }
         h4 {
-            .lib-font-size(11px);
+            .lib-font-size(@font-size__xs);
         }
     }
 

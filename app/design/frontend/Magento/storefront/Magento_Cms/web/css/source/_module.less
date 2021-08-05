@@ -336,9 +336,9 @@
     }
 
     .news{
-        display: flex;
+        .lib-vendor-prefix-display(flex);
         justify-content: space-between;
-        flex-wrap:wrap;
+        .lib-vendor-prefix-flex-wrap(wrap);
     }
 
     .news_item{
@@ -346,23 +346,23 @@
 
         h4{
             text-transform: uppercase;
-            margin: 20px 0;
+            margin: @indent__base 0;
         }
 
         p{
-            color: #a3a3a3;
+            color: @color-elogic-additional-info;
             letter-spacing: .25px;
         }
     }
 
     .news_date{
         font-style: italic;
-        color: #a3a3a3;
-        font-size: 13px;
-        margin-bottom: 15px;
+        color: @color-elogic-additional-info;
+        .lib-font-size(@font-size-average);
+        margin-bottom: @indent__s + @indent__xs;
 
         .far.fa-calendar-alt{
-            font-size: 15px;
+            .lib-font-size(@font-size-medium);
             margin-right: 8px;
         }
     }

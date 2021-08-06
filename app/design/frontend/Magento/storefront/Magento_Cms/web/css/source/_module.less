@@ -366,6 +366,66 @@
             margin-right: 8px;
         }
     }
+
+
+
+
+
+
+    //----------------Shop By Brands---------------
+    .brand_shop {
+        padding-top: @indent__base;
+        padding-bottom: @indent__base;
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-flex-direction(column);
+        position: relative;
+    }
+    .shop_header {
+        .lib-vendor-prefix-display(flex);
+        width: 100%;
+        .lib-vendor-box-align(center);
+        margin-bottom: @indent__l;
+        h1 {
+            font-family: @font-family__poppins;
+            font-weight: @font-weight__medium;
+            display: block ruby;
+            padding: 0 @indent__s;
+            font-size: 35px;
+            margin:0;
+        }
+        span {
+            display: block;
+            content: '';
+            height: 1px;
+            background-color: @color-elogic-border-gray;
+            width: 100%;
+        }
+    }
+    .brand_icons {
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-justify-content(space-around);
+    }
+    .brand_icon {
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-flex-direction(column);
+        .lib-vendor-box-align(center);
+        a {
+            img {
+                width: 120px;
+            }
+            font-family: @font-family__poppins;
+            font-weight: lighter;
+            font-size: @font-size-medium;
+            margin-top: @indent__xs * 3;
+            text-decoration: none;
+            color: @color-elogic-black;
+            transition: all 0.15s linear;
+            &:hover {
+                color: @color-elogic-nav-hover;
+            }
+        }
+    }
+
 }
 
 
@@ -405,6 +465,10 @@
 
 
     //----------------News & Blog---------------
+
+
+
+    //----------------Shop By Brands---------------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
@@ -490,6 +554,16 @@
     .news_item {
         width: 32%;
     }
+
+
+
+    //----------------Shop By Brands---------------
+    .brand_icon {
+        &:last-child {
+            .lib-vendor-prefix-display(flex);
+        }
+    }
+
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
@@ -581,6 +655,15 @@
     //----------------News & Blog---------------
     .news_item {
         width: 48%;
+    }
+
+
+
+    //----------------Shop By Brands---------------
+    .brand_icon {
+        &:last-child {
+            display: none;
+        }
     }
 }
 
@@ -681,6 +764,29 @@
     .news_item {
         width: 48%;
     }
+
+
+
+    //----------------Shop By Brands---------------
+    .shop_header{
+        h1{
+            font-size:@font-size-average * 2;
+        }
+    }
+
+    .brand_icon {
+        &:nth-last-child(-n+2) {
+            display: none;
+        }
+
+        img{
+            width:100px;
+        }
+
+        p{
+            font-size:14px;
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
@@ -732,6 +838,10 @@
 
 
     //----------------News & Blog---------------
+
+
+
+    //----------------Shop By Brands---------------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
@@ -844,6 +954,15 @@
     .news_item {
         width: 100%;
     }
+
+
+
+    //----------------Shop By Brands---------------
+    .brand_icon {
+        &:nth-last-child(-n+4) {
+            display: none;
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
@@ -898,6 +1017,9 @@
 
 
 
-
     //----------------News & Blog---------------
+
+
+
+    //----------------Shop By Brands---------------
 }

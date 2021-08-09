@@ -7,6 +7,14 @@
             </arguments>
         </referenceBlock>
 
+        <referenceContainer name="footer-container">
+            <block class="Magento\Cms\Block\Block" name="footer_navigation">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">27</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
         <referenceBlock name="footer_links" remove="true"/>
         <referenceContainer name="copyright" remove="true"/>
 

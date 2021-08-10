@@ -19,5 +19,7 @@
         <referenceContainer name="copyright" remove="true"/>
 
         <move element="form.subscribe" destination="footer-container" before="-"/>
+
+        <move element="navigation.sections" destination="header-wrapper" after="logo"/>
     </body>
 </page>

@@ -4,54 +4,54 @@
 & when (@media-common = true) {
     //------------------Footer Newsletter-------------------
     .page-footer{
-        padding-top:5px;
+        padding-top:@indent__xs;
         margin-top:0;
         padding-bottom:0 !important;//I use !important because i cannot override page-footer class default styling no matter how many nests I do
 
         .upon_all{
-            margin: 35px auto 35px;
+            margin: @indent__l + @indent__xs auto @indent__l + @indent__xs;
         }
 
         .content{
-            display:flex;
-            justify-content:space-between;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-justify-content(space-between);
             align-items:center;
         }
 
         .newsletter_info{
             h2{
                 margin-bottom: 0;
-                font-weight: 600;
+                font-weight: @font-weight__semibold;
                 letter-spacing: 2px;
                 text-transform:uppercase;
-                margin-bottom:5px;
+                margin-bottom:@indent__xs;
             }
 
             p{
-                color:#888888;
-                font-size:14px;
+                color:@color-elogic-nav-hover;
+                .lib-font-size(14px);
             }
         }
 
         .subscribe{
-            display:flex;
-            margin-right: 60px;
+            .lib-vendor-prefix-display(flex);
+            margin-right: @indent__l * 2;
 
             .actions{
-                margin-left:5px;
+                margin-left:@indent__xs;
             }
         }
 
         #newsletter{
             background: 0 0;
-            border: 1px solid #ddd;
+            border: 1px solid @color-elogic-gray;
             height: 49px;
             line-height: 50px;
-            color: #888;
-            font-size: 14px;
+            color: @color-elogic-nav-hover;
+            .lib-font-size(14px);
             font-family: Poppins,sans-serif;
             box-shadow: none;
-            padding-left: 20px;
+            padding-left: @indent__base;
             font-style: normal;
             display: inline-block;
             border-radius:0;
@@ -59,13 +59,13 @@
 
         .actions{
             .subscribe{
-                padding: 17px 35px;
+                padding: 17px @indent__l + @indent__xs;
                 border: 0;
                 margin: 0;
-                color: #fff;
-                background: #222;
+                color: @color-elogic-primary-white;
+                background: @color-elogic-black;
                 font-style: normal;
-                font-size: 14px;
+                .lib-font-size(14px);
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 border-radius: 0;
@@ -78,39 +78,39 @@
     //-------------------Footer Links------------------
     .footer-static-block {
         width:100%;
-        background-color: #fff;
-        padding-top: 60px;
+        background-color: @color-elogic-primary-white;
+        padding-top: @indent__l * 2;
         hr {
             color: #eeeeee59;
-            margin-top: 50px;
+            margin-top: @indent__m * 2;
             height: 1px;
         }
 
         .footer-nav-links {
-            display: flex;
-            justify-content: space-between;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-justify-content(space-between);
             flex-wrap: wrap;
         }
         .footer-item {
             width: 25%;
-            display: flex;
+            .lib-vendor-prefix-display(flex);
             flex-direction: column;
-            justify-content: start;
+            .lib-vendor-prefix-justify-content(start);
             position: relative;
             h2 {
-                margin-bottom: 40px;
-                font-size: 16px;
+                margin-bottom: @indent__xl;
+                .lib-font-size(16px);
                 padding-bottom: 0;
                 letter-spacing: 1px;
                 text-transform: uppercase;
-                font-weight: 500;
+                font-weight: @font-weight__medium;
                 line-height: 1;
-                color: #222;
+                color: @color-elogic-black;
                 transition: all 0.2s linear;
                 cursor: pointer;
                 width: max-content;
                 &:hover {
-                    color: #888888;
+                    color: @color-elogic-nav-hover;
                 }
             }
             ul {
@@ -123,8 +123,8 @@
                 list-style: none;
                 &:hover {
                     a {
-                        padding-left: 15px;
-                        color: #222;
+                        padding-left: @indent__xs * 3;
+                        color: @color-elogic-black;
                         &::before {
                             opacity: 1;
                             left: 0px;
@@ -134,19 +134,19 @@
                 a {
                     letter-spacing: .25px;
                     display: block;
-                    color: #888;
+                    color: @color-elogic-nav-hover;
                     text-decoration: none;
                     position: relative;
                     transition: all 0.25s linear;
-                    font-weight: 300;
+                    font-weight: @font-weight__lighter;
                     &::before {
                         opacity: 0;
                         content: "";
                         border-radius: 50%;
-                        border: 1px solid #888;
+                        border: 1px solid @color-elogic-nav-hover;
                         height: 4px;
                         width: 4px;
-                        background-color: #888;
+                        background-color: @color-elogic-nav-hover;
                         line-height: 1;
                         position: absolute;
                         left: 10px;
@@ -160,27 +160,27 @@
                 display: none;
                 position: absolute;
                 right: 10px;
-                font-size: 12px;
+                .lib-font-size(@font-size__s);
                 line-height: 30px;
                 width: 30px;
                 height: 30px;
                 text-align: center;
-                color: #333;
-                background: #eee;
+                color: @color-elogic-black;
+                background: @color-elogic-baner;
                 cursor: pointer;
                 &:hover {
-                    background: #222;
-                    color: #fff;
+                    background: @color-elogic-black;
+                    color: @color-elogic-primary-white;
                 }
             }
         }
         .footer-copyright {
-            display: flex;
-            justify-content: space-between;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-justify-content(space-between);
             margin-bottom:0;
         }
         .copyright-links {
-            display: flex;
+            .lib-vendor-prefix-display(flex);
             flex-wrap: wrap;
             text-align: center;
             ul {
@@ -190,39 +190,45 @@
             }
             li {
                 display: inline-block;
-                margin-right: 20px;
+                margin-right: @indent__base;
                 cursor: pointer;
                 a {
-                    font-size: 12px;
+                    .lib-font-size(@font-size__s);
                     text-transform: uppercase;
-                    color: #888;
+                    color: @color-elogic-nav-hover;
                     letter-spacing: 1px;
                     text-decoration: none;
                     transition: all 0.25s linear;
                 }
                 &:hover {
                     a {
-                        color: #222;
+                        color: @color-elogic-black;
                     }
                 }
             }
         }
         .copyright-connect {
-            display: flex;
-            color: #888;
-            font-size: 14px;
+            .lib-vendor-prefix-display(flex);
+            color: @color-elogic-nav-hover;
+            .lib-font-size(14px);
             text-transform: uppercase;
             ul {
-                display: flex;
-                justify-content: space-between;
-                padding-left: 30px;
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-prefix-justify-content(space-between);
+                padding-left: @indent__l;
                 width: 175px;
             }
             li {
                 list-style: none;
+                cursor: pointer;
                 a {
                     text-decoration: none;
-                    color: #888;
+                    color: @color-elogic-nav-hover;
+                    transition:all 0.2s linear;
+
+                    &:hover{
+                        color:@color-elogic-black;
+                    }
                 }
             }
         }
@@ -260,7 +266,7 @@
         }
 
         .footer-copyright {
-            justify-content: space-between;
+            .lib-vendor-prefix-justify-content(space-between);
             flex-direction: row;
             align-items: center;
         }
@@ -288,8 +294,8 @@
         }
 
         .footer-copyright{
-            display: flex;
-            justify-content: center;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-justify-content(center);
             flex-direction: column;
             align-items: center;
         }
@@ -299,7 +305,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     //----------------Footer Newsletter------------------
     .page-footer{
-        background: #f4f4f4;
+        background: @color-elogic-baner;
 
         .content{
             flex-direction:column;
@@ -307,7 +313,7 @@
 
         .newsletter_info{
             text-align:center;
-            margin-bottom:20px;
+            margin-bottom:@indent__base;
         }
 
         .subscribe{
@@ -321,17 +327,17 @@
     .footer-static-block{
         .footer-item {
             width: 100%;
-            margin-bottom: 30px;
+            margin-bottom: @indent__l;
             h2 {
-                margin-bottom: 20px;
+                margin-bottom: @indent__base;
             }
             .plus-box {
                 display: block;
             }
         }
         .footer-copyright {
-            display: flex;
-            justify-content: center;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-justify-content(center);
             flex-direction: column;
             align-items: center;
         }
@@ -353,7 +359,7 @@
     .page-footer{
         .newsletter_info{
             h2{
-                font-size:22px;
+                .lib-font-size(22px);
             }
         }
     }

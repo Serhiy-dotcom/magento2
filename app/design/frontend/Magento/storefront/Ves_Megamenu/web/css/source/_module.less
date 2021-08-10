@@ -1,0 +1,154 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    //------------------Header-------------------
+    .page-header{
+        .header{
+            &.content{
+                display: flex;
+                padding: 30px 0;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1350px;
+            }
+
+            .nav-sections{
+                background-color:transparent;
+                margin-bottom:0;
+            }
+
+            .logo{
+                margin:0;
+            }
+
+            .dropdown{
+                .nav-anchor,
+                .nav-anchor.ui-corner-all{
+                    color: #222;
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    background-color:transparent;
+                    transition: all .4s ease;
+                }
+
+                .nav-anchor{
+                    &:hover,
+                    &:active,
+                    &:focus{
+                        color: #888;
+                        background-color:transparent;
+                    }
+                }
+            }
+
+            .level0{
+                .dropdown-menu{
+                    top: 65px;
+                    background-color: #222;
+                }
+            }
+
+            .dropdown-submenu{
+                &:hover {
+                    background-color:transparent;
+
+                    .nav-anchor{
+                        color:#fff;
+                        background-color:transparent;
+                        border:none;
+                        margin-left:15px;
+
+                        &::before {
+                            opacity: 1;
+                            left: 0px;
+                        }
+                    }
+                }
+
+                .nav-anchor {
+                    display: block;
+                    text-decoration: none;
+                    background: 0 0;
+                    border: none;
+                    color: #fff;
+                    font-size: 1em;
+                    padding: 0 30px 25px 50px;
+                    line-height: 1.4;
+                    text-transform: none;
+                    font-weight: 300;
+                    letter-spacing: .25px;
+                    position:relative;
+                    transition: all 0.25s linear;
+
+                    &:active,
+                    &:focus{
+                        color:#fff;
+                        border:none;
+                    }
+
+                    &::before {
+                        opacity: 0;
+                        color:#fff;
+                        content: "";
+                        border-radius: 50%;
+                        border: 1px solid #fff;
+                        height: 4px;
+                        width: 4px;
+                        background-color: #fff;
+                        line-height: 1;
+                        position: absolute;
+                        left: 18px;
+                        top: 50%;
+                        transform: translateY(-65%);
+                        transition: left 0.25s linear;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl){
+    //------------------Header-------------------
+
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
+    //------------------Header-------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    //------------------Header-------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    //----------------Header------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    //------------------Header-------------------
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    //----------------Footer Newsletter----------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
+    //------------------Footer Newsletter-------------------
+
+}

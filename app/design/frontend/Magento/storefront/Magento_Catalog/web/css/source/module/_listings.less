@@ -1,0 +1,187 @@
+//
+//  Variables
+//  _____________________________________________
+
+@product-name-link__color: @text__color;
+@product-name-link__color__active: @text__color;
+@product-name-link__color__hover: @text__color;
+@product-name-link__color__visited: @text__color;
+
+@product-name-link__text-decoration: none;
+@product-name-link__text-decoration__active: @link__hover__text-decoration;
+@product-name-link__text-decoration__hover: @link__hover__text-decoration;
+@product-name-link__text-decoration__visited: @link__hover__text-decoration;
+
+@product-item__hover__background-color: @color-white;
+@product-item__hover__box-shadow: 3px 4px 4px 0 rgba(0, 0, 0, .3);
+
+@product-price__muted__color: @color-gray40;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    //  Product Lists
+    .product-items{
+        .lib-vendor-prefix-display(flex);
+        justify-content: space-between;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .product-item{
+        text-align:center;
+        width: 24%;
+        min-width: 100px;
+        height: max-content;
+        padding: 0 10px;
+
+        a{
+            display: inline-block;
+            width: 100%;
+
+            .product-image-container{
+                //I use !important because this class have element style which I can't overwrite no matter how many nestings I do
+                width:100% !important;
+            }
+        }
+    }
+
+    .product-item-details{
+        margin: 25px 0 0;
+        text-align: center;
+    }
+
+    .product-item-link,
+    .product-item-link:visited{
+        text-transform: uppercase;
+        color: @color-elogic-icon-gray;
+        font-family: @font-family__poppins;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        text-decoration:none;
+        transition:all 0.2s linear;
+    }
+
+    .product-item-link:hover{
+        color:@color-elogic-black;
+        text-decoration:none;
+    }
+
+    .price-label{
+        display:none;
+    }
+
+    .price-box{
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-box-align(center);
+        width: 100%;
+        margin: 8px 0;
+        justify-content: center;
+    }
+
+    .price-box{
+        span{
+            font-family: @font-family__oswald;
+        }
+
+        .special-price{
+            font-weight: bold;
+            .lib-font-size(18px);
+        }
+
+        .old-price{
+            color:@color-elogic-bold-gray;
+            text-decoration: line-through;
+            .lib-font-size(14px);
+            font-weight: 400;
+            margin-left:5px;
+        }
+    }
+
+    .actions-secondary{
+        display:none;
+    }
+
+    .product-item-inner{
+        display:none;
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
+    .product-items{
+        .product-item{
+            width:100%;
+            padding:0;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .product-items{
+        .product-item{
+            width:90%;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .product-items{
+        .lib-vendor-prefix-flex-wrap(wrap);
+        justify-content:center;
+    }
+
+    .product-items{
+        .product-item{
+            width:42%;
+            padding: 0 10px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .product-items{
+        .lib-vendor-prefix-flex-wrap(wrap);
+
+        .product-item{
+            width:30%;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product-items{
+        .lib-vendor-prefix-flex-wrap(wrap);
+
+        .product-item{
+            width:30%;
+            padding: 0 10px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .product-items{
+        .lib-vendor-prefix-flex-wrap(nowrap);
+
+        .product-item{
+            width:23%;
+
+            &:first-child{
+                padding-left:0;
+            }
+
+            &:last-child{
+                padding-right:0;
+            }
+        }
+    }
+}

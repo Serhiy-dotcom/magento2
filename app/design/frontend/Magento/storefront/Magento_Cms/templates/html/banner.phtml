@@ -35,3 +35,46 @@
         </div>
     </div>
 </div>
+
+
+/*Our Products*/
+<div class="our_products upon_all">
+    <div class="slider_btns product_slider_btns"><a href="#">Prev</a> <a href="#">Next</a></div>
+    <div class="products_header">
+        <h2>Our Products</h2>
+        <h4>most trendy furniture</h4>
+    </div>
+    {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="4" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`attribute_set_id`,`operator`:`==`,`value`:`15`^]^]"}}
+</div>
+
+
+/*November Sale*/
+<div class="sale">
+    <div class="upon_all sale_bg">
+        <div class="sale_text">
+            <div class="sale_info">
+                <h2>november sale</h2>
+                <h4>free shipping over $125 for international orders</h4>
+            </div>
+            <a href="#">shop now</a>
+        </div>
+    </div>
+</div>
+
+
+
+/*Bestsellers-Features-Most Viewed*/
+<div class="products_group upon_all">
+    <div class="group_item bestsellers">
+        <span class="group_item_header">Bestsellers</span>
+        <div class="group_item_content">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="3" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`6`^]^]"}}</div>
+    </div>
+    <div class="group_item featured">
+        <span class="group_item_header">Featured</span>
+        <div class="group_item_content">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="3" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`6`^]^]"}}</div>
+    </div>
+    <div class="group_item most_viewed">
+        <span class="group_item_header">Most Viewed</span>
+        <div class="group_item_content">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="3" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`6`^]^]"}}</div>
+    </div>
+</div>

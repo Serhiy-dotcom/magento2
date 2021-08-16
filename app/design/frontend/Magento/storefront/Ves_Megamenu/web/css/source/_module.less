@@ -57,7 +57,7 @@
                     top: 65px;
                     background-color: #222;
 
-                    .submenu{
+                    >.submenu{
                         left:112% !important;//I'm using !important because the template use !important as well
                     }
                 }
@@ -327,7 +327,172 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     //----------------Header------------------
+    .nav-sections-item-title {
+        display:none;
 
+        &.active{
+            display:none;
+        }
+    }
+
+    .nav-sections-item-content{
+        margin-top:15px;
+    }
+
+    .page-header{
+        .header{
+            &.content{
+                .nav-sections{
+                    background-color: #222;
+                    width: 100%;
+
+                    .nav-sections-items{
+                        margin:30px;
+                        left:0;
+
+                        &::before{
+                            content: '\f00d';
+                            display: table;
+                            font-family: @font-family-awesome;
+                            color: #fff;
+                            font-size: 25px;
+                            position: absolute;
+                            right: 0;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ves-megamenu{
+            .nav-anchor{
+                .opener{
+                    &::before{
+                        content:"\f107";
+                        font-family: @font-family-awesome;
+                    }
+
+                    &.item-active{
+                        &::before{
+                            content:"\f105";
+                        }
+                    }
+                }
+            }
+
+            .dropdown{
+                background-color: #222;
+
+                &:hover{
+                    .nav-anchor{
+                        &.ui-corner-all{
+                            color:#888;
+                        }
+                    }
+                }
+
+                .nav-anchor{
+                    &.ui-corner-all{
+                        color: #ddd;
+                        border-bottom: 1px solid #333;
+                        transition: all 0.2s linear;
+                    }
+                }
+
+                .level1{
+                    &.dropdown-submenu{
+                        &:hover{
+                            >.nav-anchor{
+                                margin-left:0;
+                                color: #ddd;
+                                font-size: 14px;
+
+                                &:hover{
+                                    margin-left:0;
+                                    color:#ddd;
+                                }
+
+                                &::before{
+                                    opacity:0;
+                                }
+                            }
+                        }
+
+                        .nav-anchor{
+                            color: #ddd;
+                            font-size: 14px;
+
+                            &:hover{
+                                margin-left:0;
+                                color:#ddd;
+                            }
+
+                            &:hover::before{
+                                opacity:0;
+                            }
+                        }
+                    }
+                }
+
+                .dropdown-submenu{
+                    &.parent{
+                        &::after{
+                            display:none;
+                        }
+
+                        .submenu{
+                            &.dropdown-menu{
+                                display:none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .level2{
+                &.dropdown-submenu{
+                    .nav-anchor{
+                        color: #ddd;
+                        font-size: 14px;
+
+                        &:hover{
+                            margin-left:0;
+                            color:#ddd;
+                        }
+
+                        &:hover::before{
+                            opacity:0;
+                        }
+                    }
+                }
+            }
+
+            .navigation{
+                .special-baner{
+                    >.submenu{
+                        &.dropdown-menu{
+                            padding:0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navigation{
+            li{
+                &.level0{
+                    &:last-child{
+                        border-bottom:1px solid #222;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-sections{
+        left:-100%;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {

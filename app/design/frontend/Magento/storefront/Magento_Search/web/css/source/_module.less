@@ -37,6 +37,45 @@
         width:max-content;
         max-width:250px;
         padding:0;
+        position:relative;
+
+        form{
+            position:absolute;
+            right:0;
+            display:none;
+
+            .field{
+                &.search{
+                    position:relative;
+
+                    #search{
+                        width: 360px;
+                        background-color: #222;
+                        padding: 7px 45px 7px 25px;
+                        height: auto;
+                        color:#888;
+                        cursor: text;
+                        box-shadow:none;
+
+                        &::placeholder{
+                            color:#888;
+                        }
+
+                        &:focus,
+                        &:active{
+                            box-shadow:none;
+                        }
+                    }
+
+                    .action{
+                        &.search{
+                            color: #fff;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
 
         .block {
             &-title {
@@ -48,10 +87,12 @@
             margin-bottom: 0;
             width:max-content;
             max-width:250px;
+        }
 
-            form{
-                position:relative;
-                display:none;
+        .action{
+            &.search{
+                top:50%;
+                transform: translateY(-50%);
             }
         }
 
@@ -78,12 +119,7 @@
             }
         }
 
-        .action.search {
-            display: none;
-        }
-
         .control {
-            border-top: 1px solid @border-color__base;
             clear: both;
             margin: 0 -@layout__width-xs-indent -1px;
             padding: 0 @layout__width-xs-indent;
@@ -91,9 +127,7 @@
 
         input {
             font-size: 16px;
-            left: -300%;
             margin: 15px 0;
-            position: absolute;
         }
 
         .nested {

@@ -27,6 +27,12 @@
             .logo {
                 margin: 0;
             }
+
+            .compare{
+                &.wrapper{
+                    display:none;
+                }
+            }
         }
 
         .ves-megamenu{
@@ -317,12 +323,74 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
     //------------------Header-------------------
+    .page-header{
+        .header{
+            &.content{
+                flex-wrap: nowrap;
+                padding:30px;
+            }
 
+            .logo{
+                width: auto;
+                margin: 0;
+                padding-bottom: 0px;
+
+                img{
+                    margin:0 auto;
+                }
+            }
+
+            .ves-megamenu{
+                &.top-navigation{
+                    >.navigation{
+                        padding:0 20px;
+                    }
+                }
+            }
+
+            .menu{
+                &.navi{
+                    margin-left:0;
+                }
+            }
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
     //------------------Header-------------------
+    .page-header{
+        .header{
+            &.content{
+                flex-wrap: wrap;
+                padding:20px 0;
+            }
 
+            .logo{
+                width: 100%;
+                margin: 0 auto;
+                padding-bottom: 10px;
+
+                img{
+                    margin:0 auto;
+                }
+            }
+
+            .ves-megamenu{
+                &.top-navigation{
+                    >.navigation{
+                        padding:0;
+                    }
+                }
+            }
+
+            .menu{
+                &.navi{
+                    margin-left:10%;
+                }
+            }
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
@@ -350,15 +418,18 @@
                         margin:30px;
                         left:0;
 
-                        &::before{
-                            content: '\f00d';
-                            display: table;
-                            font-family: @font-family-awesome;
-                            color: #fff;
-                            font-size: 25px;
+                        .close-burger{
                             position: absolute;
                             right: 0;
                             cursor: pointer;
+
+                            &::before{
+                                content: '\f00d';
+                                display: table;
+                                font-family: @font-family-awesome;
+                                color: #fff;
+                                font-size: 25px;
+                            }
                         }
                     }
                 }

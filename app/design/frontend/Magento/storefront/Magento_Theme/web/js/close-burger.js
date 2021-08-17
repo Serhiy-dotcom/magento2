@@ -24,5 +24,5 @@ define([
         },
     });
 
-    return $.mage.searchDropDown;
+    return $.mage.closeBurger;
 })

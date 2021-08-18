@@ -60,8 +60,11 @@
 
             .level0{
                 .dropdown-menu{
-                    top: 65px;
+                    top: 50px;
                     background-color: #222;
+                    transform-origin: top;
+                    transform:scaleY(0);
+                    transition:transform 0.25s linear;
 
                     >.submenu{
                         left:112% !important;//I'm using !important because the template use !important as well
@@ -117,7 +120,7 @@
                     border: none !important;//to prevent big nestings I use !important
                     color: #fff;
                     font-size: 1em;
-                    padding: 0 20px;
+                    padding: 0 0 0 20px;
                     line-height: 36px;
                     text-transform: none;
                     font-weight: 300;
@@ -164,10 +167,12 @@
                     }
 
                     .submenu.dropdown-menu{
-                        width: 100vw;
-                        left: -395px;
+                        width: 88vw;
+                        left: 145%;
                         max-width: 1320px;
                         padding: 40px 30px;
+                        transform: translateX(-50%) scaleY(0);
+                        transform-origin: top;
 
                         .submenu-inner{
                             padding:0;
@@ -354,6 +359,68 @@
                 }
             }
         }
+
+
+
+        //-------------------Special Baner-----------------------
+        .ves-megamenu{
+            .navigation{
+                .special-baner{
+                    .submenu{
+                        &.dropdown-menu{
+                            left: 145%;
+                            width: 88vw;
+                        }
+                    }
+
+                    .top-text{
+                        h6{
+                            font-size:17px;
+                        }
+
+                        p{
+                            font-size:14px;
+                        }
+                    }
+                }
+
+                .imgs-flex{
+                    a{
+                        margin:8px 20px;
+
+                        &:first-child{
+                            margin-right:40px;
+                        }
+                    }
+                }
+
+                .level0{
+                    .submenu{
+                        .submenu-inner{
+                            .content-wrapper{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .nav-item{
+                    >.submenu{
+                        >.item-content{
+                            width:50% !important;//overriding megamenus styles
+                        }
+
+                        >.item-sidebar{
+                            width: 50% !important;//overriding megamenus styles
+
+                            .imgs-flex{
+                                flex-direction: row;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -390,11 +457,189 @@
                 }
             }
         }
+
+
+
+        .ves-megamenu{
+            .navigation{
+                .nav-item{
+                    .span-level(@i) when (@i > -1){
+                        &.level@{i}{
+                            >.submenu.dropdown-menu{
+                                transform: scaleY(0);
+                                display:block;
+                                opacity:0;
+                            }
+
+                            &:hover{
+                                >.submenu.dropdown-menu{
+                                    transform: scaleY(1);
+                                    opacity:1;
+                                }
+                            }
+
+                            &.special-baner{
+                                >.submenu.dropdown-menu{
+                                    transform: translateX(-50%) scaleY(0);
+                                    display:block;
+                                    opacity:0;
+                                }
+
+                                &:hover{
+                                    >.submenu.dropdown-menu{
+                                        transform: translateX(-50%) scaleY(1);
+                                        opacity:1;
+                                    }
+                                }
+                            }
+                        }
+
+                        .span-level(@i - 1);
+                    }
+
+                    .span-level(2);
+                }
+
+
+
+
+
+                //-------------------Special Baner-----------------------
+                .special-baner{
+                    .submenu{
+                        &.dropdown-menu{
+                            left: 375px;
+                            width:750px;
+                        }
+                    }
+
+                    .top-text{
+                        h6{
+                            font-size:15px;
+                        }
+
+                        p{
+                            font-size:12px;
+                        }
+                    }
+                }
+
+                .imgs-flex{
+                    a{
+                        margin:8px;
+
+                        &:first-child{
+                            margin-right:8px;
+                        }
+                    }
+                }
+
+                .level0{
+                    .submenu{
+                        .submenu-inner{
+                            .content-wrapper{
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                        }
+                    }
+                }
+
+                .nav-item{
+                    >.submenu{
+                        >.item-content{
+                            width:65% !important;//overriding megamenus styles
+                        }
+
+                        >.item-sidebar{
+                            width: 25% !important;//overriding megamenus styles
+
+                            .imgs-flex{
+                                flex-direction: column;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .item-content1{
+        &.hidden-xs{
+            &.hidden-sm{
+                display:flex !important;//must to use because by default it has !important
+            }
+        }
+    }
+
+    .item-content2{
+        &.hidden-lg{
+            &.hidden-md{
+                display:none;
+            }
+        }
     }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     //----------------Header------------------
+    .page-header{
+        margin-bottom:0;
+
+        .header{
+            &.content{
+                flex-wrap: wrap;
+                padding:20px 0;
+            }
+
+            .logo{
+                width: 80%;
+                margin-left: 20px;
+
+                img{
+                    width:140px;
+                }
+            }
+
+            .ves-megamenu{
+                &.top-navigation{
+                    >.navigation{
+                        padding:0;
+                    }
+                }
+
+                .level0{
+                    .dropdown-menu{
+                        transform:scaleY(1);
+                    }
+                }
+            }
+
+            .menu{
+                &.navi{
+                    margin-left:0;
+                    align-items:center;
+                    width:20%;
+                    justify-content: end;
+                }
+            }
+        }
+    }
+
+
+
+
+    //----------------Burger------------------
+    .nav-toggle{
+        top:50%;
+        transform: translateY(-50%);
+
+        &::before{
+            color:#222;
+            font-size:25px;
+        }
+    }
+
     .nav-sections-item-title {
         display:none;
 
@@ -564,6 +809,22 @@
     .nav-sections{
         left:-100%;
     }
+
+
+
+
+    //----------------Special Baner------------------
+    .page-header{
+        .ves-megamenu{
+            .navigation{
+                .special-baner{
+                    .submenu.dropdown-menu{
+                        transform:translateX(0%);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
@@ -574,7 +835,25 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
     //----------------Footer Newsletter----------------
+    .page-header{
+        .header{
+            &.content{
+                flex-direction:column;
+            }
 
+            .menu{
+                &.navi{
+                    width: 90%;
+                    justify-content: end;
+                    margin-top: 20px;
+                }
+            }
+
+            .nav-toggle{
+                top:74%;
+            }
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {

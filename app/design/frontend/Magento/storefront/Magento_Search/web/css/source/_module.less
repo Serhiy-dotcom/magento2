@@ -322,3 +322,13 @@
         &:extend(.abs-forms-general-desktop all);
     }
 }
+
+
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .block{
+        &.block-search{
+            margin-top:0;
+        }
+    }
+}

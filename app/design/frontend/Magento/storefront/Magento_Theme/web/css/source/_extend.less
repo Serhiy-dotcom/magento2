@@ -53,7 +53,23 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     //----------------Header------------------
+    .menu{
+        &.navi{
+            .link{
+                &.authorization-link{
+                    a{
+                        font-size:0;
 
+                        &::before{
+                            content:"\f2c0";
+                            font-family:@font-family-awesome;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {

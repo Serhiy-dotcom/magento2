@@ -39,6 +39,10 @@
         padding:0;
         position:relative;
 
+        .label{
+            display:none;
+        }
+
         form{
             position:absolute;
             right:0;
@@ -255,12 +259,89 @@
 //
 //  Mobile
 //  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .block{
+        &.block-search{
+            form{
+                .field{
+                    &.search{
+                        #search{
+                            width:250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .block-search {
-        margin-top: @indent__s;
+        float: right;
+        padding-left: 15px;
+        position: relative;
+        z-index: 4;
+
+        .label {
+            &:extend(.abs-visually-hidden-desktop all);
+        }
+
+        .control {
+            border-top: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            .lib-input-placeholder(@form-element-input-placeholder__color);
+            margin: 0;
+            padding-right: 35px;
+            position: static;
+        }
+
+        .action.search {
+            display: inline-block;
+            .lib-button-icon(
+                @_icon-font-content: @icon-search,
+                @_icon-font-size: 16px,
+                @_icon-font-text-hide: true,
+                @_icon-font-color: @header-icons-color,
+                @_icon-font-color-hover: @header-icons-color-hover,
+                @_icon-font-line-height: 32px
+            );
+            .lib-button-reset();
+            position: absolute;
+            right: @indent__s;
+            top: 0;
+            z-index: 1;
+
+            &:focus {
+                &:before {
+                    .lib-css(color, @color-gray20);
+                }
+            }
+        }
+    }
+
+    .search-autocomplete {
+        margin-top: 0;
+    }
+
+    .form.search.advanced {
+        &:extend(.abs-forms-general-desktop all);
+    }
+
+    #search-icon{
+        margin-top:0;
+
+        .label{
+            display:none;
+        }
     }
 }
+
+
 
 //
 //  Desktop
@@ -325,10 +406,3 @@
 
 
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    .block{
-        &.block-search{
-            margin-top:0;
-        }
-    }
-}

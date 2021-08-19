@@ -21,6 +21,10 @@
             </block>
         </referenceContainer>
 
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::scripts.phtml"/>
+        </referenceContainer>
+
         <referenceBlock name="footer_links" remove="true"/>
         <referenceContainer name="copyright" remove="true"/>
 

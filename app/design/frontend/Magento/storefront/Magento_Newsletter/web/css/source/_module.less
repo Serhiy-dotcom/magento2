@@ -97,6 +97,24 @@
             flex-direction: column;
             .lib-vendor-prefix-justify-content(start);
             position: relative;
+
+            a{
+                display: flex;
+                text-decoration: none;
+                align-items:end;
+
+                &:hover{
+                    h2{
+                        color:@color-elogic-nav-hover;
+                    }
+
+                    .plus-box{
+                        background: @color-elogic-black;
+                        color: @color-elogic-primary-white;
+                    }
+                }
+            }
+
             h2 {
                 margin-bottom: @indent__xl;
                 .lib-font-size(16px);
@@ -109,9 +127,6 @@
                 transition: all 0.2s linear;
                 cursor: pointer;
                 width: max-content;
-                &:hover {
-                    color: @color-elogic-nav-hover;
-                }
             }
             ul {
                 padding: 0;
@@ -168,9 +183,10 @@
                 color: @color-elogic-black;
                 background: @color-elogic-baner;
                 cursor: pointer;
-                &:hover {
-                    background: @color-elogic-black;
-                    color: @color-elogic-primary-white;
+                top:0;
+
+                &::before{
+                    display:block;
                 }
             }
         }
@@ -281,6 +297,14 @@
     .page-footer{
         .subscribe{
             margin-right:0;
+        }
+    }
+
+    .footer-static-block{
+        .footer-item{
+            ul{
+                display:block !important;
+            }
         }
     }
 

@@ -6,16 +6,16 @@
     .page-header{
         .widget{
             &.block{
-                margin:0 0 20px;
+                margin:0 0 @indent__base;
             }
         }
 
         .header {
             &.content {
-                display: flex;
-                padding: 30px 0;
-                align-items: center;
-                justify-content: space-between;
+                .lib-vendor-prefix-display(flex);
+                padding: @indent__l 0;
+                .lib-vendor-box-align(center);
+                .lib-vendor-prefix-justify-content(space-between);
                 max-width: 1350px;
             }
 
@@ -39,9 +39,9 @@
             .dropdown{
                 .nav-anchor,
                 .nav-anchor.ui-corner-all{
-                    color: #222;
-                    font-size: 14px;
-                    font-weight: 400;
+                    color: @color-elogic-black;
+                    .lib-font-size(14px);
+                    font-weight: @font-weight__regular;
                     letter-spacing: 1px;
                     text-transform: uppercase;
                     background-color:transparent;
@@ -52,7 +52,7 @@
                     &:hover,
                     &:active,
                     &:focus{
-                        color: #888;
+                        color: @color-elogic-icon-gray;
                         background-color:transparent;
                     }
                 }
@@ -61,7 +61,7 @@
             .level0{
                 .dropdown-menu{
                     top: 50px;
-                    background-color: #222;
+                    background-color: @color-elogic-black;
                     transform-origin: top;
                     transform:scaleY(0);
                     transition:transform 0.25s linear;
@@ -77,7 +77,7 @@
 
                 &::after{
                     content:'';
-                    border: solid #888;
+                    border: solid @color-elogic-icon-gray;
                     border-width: 0 1px 1px 0;
                     display: inline-block;
                     padding: 2px;
@@ -90,7 +90,7 @@
 
                 &:hover{
                     &::after{
-                        border-color:#fff;
+                        border-color:@color-elogic-primary-white;
                     }
                 }
             }
@@ -100,10 +100,10 @@
                 background-color:transparent;
 
                 &:hover > .nav-anchor{
-                    color:#fff;
+                    color:@color-elogic-primary-white;
                     background-color:transparent;
                     border:none;
-                    margin-left:15px;
+                    margin-left:@indent__xs * 3;
 
                     &::before {
                         opacity: 1;
@@ -118,31 +118,31 @@
                     text-decoration: none;
                     background: 0 0;
                     border: none !important;//to prevent big nestings I use !important
-                    color: #fff;
+                    color: @color-elogic-primary-white;
                     font-size: 1em;
-                    padding: 0 0 0 20px;
+                    padding: 0 0 0 @indent__base;
                     line-height: 36px;
                     text-transform: none;
-                    font-weight: 300;
+                    font-weight: @font-weight__lighter;
                     letter-spacing: .25px;
                     position:relative;
                     transition: all 0.25s linear;
 
                     &:active,
                     &:focus{
-                        color:#fff;
+                        color:@color-elogic-primary-white;
                         border:none;
                     }
 
                     &::before {
                         opacity: 0;
-                        color:#fff;
+                        color:@color-elogic-primary-white;
                         content: "";
                         border-radius: 50%;
-                        border: 1px solid #fff;
+                        border: 1px solid @color-elogic-primary-white;
                         height: 4px;
                         width: 4px;
-                        background-color: #fff;
+                        background-color: @color-elogic-primary-white;
                         line-height: 1;
                         position: absolute;
                         left: 18px;
@@ -163,14 +163,14 @@
             .navigation{
                 .special-baner{
                     .item-sidebar{
-                        margin-top: -15px;
+                        margin-top: @indent__xs * (-3);
                     }
 
                     .submenu.dropdown-menu{
                         width: 88vw;
                         left: 145%;
                         max-width: 1320px;
-                        padding: 40px 30px;
+                        padding: @indent__xl @indent__l;
                         transform: translateX(-50%) scaleY(0);
                         transform-origin: top;
 
@@ -178,60 +178,60 @@
                             padding:0;
 
                             .item-header{
-                                margin-bottom:50px;
+                                margin-bottom:@indent__m * 2;
                             }
                         }
                     }
 
                     .submenu-inner{
-                        padding: 40px 30px;
+                        padding: @indent__xl @indent__l;
                     }
 
                     .nav-top-block{
-                        display: flex;
-                        justify-content: space-between;
+                        .lib-vendor-prefix-display(flex);
+                        .lib-vendor-prefix-justify-content(space-between);
                     }
 
                     .top-item{
                         width: 33%;
-                        display: flex;
-                        align-items:center;
+                        .lib-vendor-prefix-display(flex);
+                        .lib-vendor-box-align(center);
 
                         em{
                             width: 50px;
                             height: 50px;
-                            font-size: 18px;
+                            .lib-font-size(@font-size__l);
                             text-align: center;
                             line-height: 50px;
-                            color: #222;
-                            background: #fff;
+                            color: @color-elogic-black;
+                            background: @color-elogic-primary-white;
                             border-radius: 100%;
                             display: inline-block;
                         }
                     }
 
                     .top-text{
-                        padding-left:15px;
+                        padding-left:@indent__xs * 3;
 
                         h6{
                             text-transform: none;
-                            color: #fff;
-                            font-size: 17px;
+                            color: @color-elogic-primary-white;
+                            .lib-font-size(17px);
                             margin-bottom: 0;
                             padding-bottom:3px;
                         }
 
                         p{
                             color: #777;
-                            font-weight: 400;
+                            font-weight: @font-weight__regular;
                             line-height: 22px;
                         }
                     }
 
                     .mega-col{
-                        display: flex;
-                        justify-content:space-between;
-                        background-color:#222;
+                        .lib-vendor-prefix-display(flex);
+                        .lib-vendor-prefix-justify-content(space-between);
+                        background-color:@color-elogic-black;
 
                         .level1{
                             &.dropdown-submenu.parent{
@@ -245,10 +245,10 @@
 
                         .subitems-group{
                             text-transform: uppercase;
-                            font-weight: 500;
-                            color:#ddd;
-                            font-size:15px;
-                            margin-bottom: 25px;
+                            font-weight: @font-weight__medium;
+                            color:@color-elogic-nav-anchor;
+                            .lib-font-size(@font-size-medium);
+                            margin-bottom: @indent__m;
 
                             &:hover{
                                 text-decoration:underline;
@@ -269,12 +269,12 @@
                 }
 
                 .imgs-flex{
-                    display: flex;
+                    .lib-vendor-prefix-display(flex);
                     width: 100%;
 
                     a{
                         cursor:pointer;
-                        margin:8px 20px;
+                        margin:8px @indent__base;
                         padding:0;
 
                         &:hover{
@@ -282,7 +282,7 @@
                         }
 
                         &:first-child{
-                            margin-right:40px;
+                            margin-right:@indent__xl;
                         }
 
                         img{
@@ -295,7 +295,7 @@
 
                 .item-footer{
                     border-top:1px solid #50442A;
-                    padding-top:30px;
+                    padding-top:@indent__l;
 
                     >.widget{
                         &.block{
@@ -332,7 +332,7 @@
         .header{
             &.content{
                 flex-wrap: nowrap;
-                padding:30px;
+                padding:@indent__l;
             }
 
             .logo{
@@ -348,7 +348,7 @@
             .ves-megamenu{
                 &.top-navigation{
                     >.navigation{
-                        padding:0 20px;
+                        padding:0 @indent__base;
                     }
                 }
             }
@@ -375,21 +375,21 @@
 
                     .top-text{
                         h6{
-                            font-size:17px;
+                            .lib-font-size(17px);
                         }
 
                         p{
-                            font-size:14px;
+                            .lib-font-size(14px);
                         }
                     }
                 }
 
                 .imgs-flex{
                     a{
-                        margin:8px 20px;
+                        margin:8px @indent__base;
 
                         &:first-child{
-                            margin-right:40px;
+                            margin-right:@indent__xl;
                         }
                     }
                 }
@@ -430,13 +430,13 @@
         .header{
             &.content{
                 flex-wrap: wrap;
-                padding:20px 0;
+                padding:@indent__base 0;
             }
 
             .logo{
                 width: 100%;
                 margin: 0 auto;
-                padding-bottom: 10px;
+                padding-bottom: @indent__s;
 
                 img{
                     margin:0 auto;
@@ -515,11 +515,11 @@
 
                     .top-text{
                         h6{
-                            font-size:15px;
+                            .lib-font-size(@font-size-medium);
                         }
 
                         p{
-                            font-size:12px;
+                            .lib-font-size(@font-size__s);
                         }
                     }
                 }
@@ -538,8 +538,8 @@
                     .submenu{
                         .submenu-inner{
                             .content-wrapper{
-                                display: flex;
-                                justify-content: space-between;
+                                .lib-vendor-prefix-display(flex);
+                                .lib-vendor-prefix-justify-content(space-between);
                             }
                         }
                     }
@@ -589,12 +589,12 @@
         .header{
             &.content{
                 flex-wrap: wrap;
-                padding:20px 0;
+                padding:@indent__base 0;
             }
 
             .logo{
                 width: 80%;
-                margin-left: 20px;
+                margin-left: @indent__base;
 
                 img{
                     width:140px;
@@ -618,9 +618,9 @@
             .menu{
                 &.navi{
                     margin-left:0;
-                    align-items:center;
+                    .lib-vendor-box-align(center);
                     width:20%;
-                    justify-content: end;
+                    .lib-vendor-prefix-justify-content(end);
                 }
             }
         }
@@ -635,8 +635,8 @@
         transform: translateY(-50%);
 
         &::before{
-            color:#222;
-            font-size:25px;
+            color:@color-elogic-black;
+            .lib-font-size(25px);
         }
     }
 
@@ -649,18 +649,18 @@
     }
 
     .nav-sections-item-content{
-        margin-top:15px;
+        margin-top:@indent__xs * 3;
     }
 
     .page-header{
         .header{
             &.content{
                 .nav-sections{
-                    background-color: #222;
+                    background-color: @color-elogic-black;
                     width: 100%;
 
                     .nav-sections-items{
-                        margin:30px;
+                        margin:@indent__l;
                         left:0;
 
                         .close-burger{
@@ -672,8 +672,8 @@
                                 content: '\f00d';
                                 display: table;
                                 font-family: @font-family-awesome;
-                                color: #fff;
-                                font-size: 25px;
+                                color: @color-elogic-primary-white;
+                                .lib-font-size(25px);
                             }
                         }
                     }
@@ -698,19 +698,19 @@
             }
 
             .dropdown{
-                background-color: #222;
+                background-color: @color-elogic-black;
 
                 &:hover{
                     .nav-anchor{
                         &.ui-corner-all{
-                            color:#888;
+                            color:@color-elogic-icon-gray;
                         }
                     }
                 }
 
                 .nav-anchor{
                     &.ui-corner-all{
-                        color: #ddd;
+                        color: @color-elogic-nav-anchor;
                         border-bottom: 1px solid #333;
                         transition: all 0.2s linear;
                     }
@@ -721,12 +721,12 @@
                         &:hover{
                             >.nav-anchor{
                                 margin-left:0;
-                                color: #ddd;
-                                font-size: 14px;
+                                color: @color-elogic-nav-anchor;
+                                .lib-font-size(14px);
 
                                 &:hover{
                                     margin-left:0;
-                                    color:#ddd;
+                                    color:@color-elogic-nav-anchor;
                                 }
 
                                 &::before{
@@ -736,12 +736,12 @@
                         }
 
                         .nav-anchor{
-                            color: #ddd;
-                            font-size: 14px;
+                            color: @color-elogic-nav-anchor;
+                            .lib-font-size(14px);
 
                             &:hover{
                                 margin-left:0;
-                                color:#ddd;
+                                color:@color-elogic-nav-anchor;
                             }
 
                             &:hover::before{
@@ -769,12 +769,12 @@
             .level2{
                 &.dropdown-submenu{
                     .nav-anchor{
-                        color: #ddd;
-                        font-size: 14px;
+                        color: @color-elogic-nav-anchor;
+                        .lib-font-size(14px);
 
                         &:hover{
                             margin-left:0;
-                            color:#ddd;
+                            color:@color-elogic-nav-anchor;
                         }
 
                         &:hover::before{
@@ -799,7 +799,7 @@
             li{
                 &.level0{
                     &:last-child{
-                        border-bottom:1px solid #222;
+                        border-bottom:1px solid @color-elogic-black;
                     }
                 }
             }
@@ -844,8 +844,8 @@
             .menu{
                 &.navi{
                     width: 90%;
-                    justify-content: end;
-                    margin-top: 20px;
+                    .lib-vendor-prefix-justify-content(end);
+                    margin-top: @indent__base;
                 }
             }
 

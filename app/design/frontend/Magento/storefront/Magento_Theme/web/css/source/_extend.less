@@ -6,17 +6,17 @@
         &.authorization-link{
             list-style: none;
             text-transform: uppercase;
-            padding-right:20px;
+            padding-right:@indent__base;
 
             a{
-                color: #222;
+                color: @color-elogic-black;
                 text-decoration: none;
-                font-weight:300;
-                font-size:12px;
+                font-weight:@font-weight__lighter;
+                font-size:@font-size__s;
                 transition:color 0.1s linear;
 
                 &:hover{
-                    color:#888
+                    color:@color-elogic-icon-gray;
                 }
             }
         }
@@ -25,7 +25,7 @@
     .menu{
         &.navi{
             list-style: none;
-            display: flex;
+            .lib-vendor-prefix-display(flex);
         }
     }
 }

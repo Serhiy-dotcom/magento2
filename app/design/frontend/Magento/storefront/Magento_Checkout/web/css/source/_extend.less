@@ -5,7 +5,7 @@
     .menu.navi{
         .minicart-wrapper{
             margin:0;
-            padding-right:20px;
+            padding-right:@indent__base;
 
             .action{
                 &.showcart{
@@ -24,15 +24,15 @@
                         padding: 0;
                         position: unset;
                         width: max-content;
-                        color: #222;
+                        color: @color-elogic-black;
                         letter-spacing: 1px;
                         text-transform: uppercase;
-                        font-size: 12px;
-                        font-weight: 300;
+                        font-size: @font-size__s;
+                        font-weight: @font-weight__lighter;
                         transition:color 0.1s linear;
 
                         &:hover{
-                            color:#888;
+                            color:@color-elogic-icon-gray;
                         }
                     }
                 }

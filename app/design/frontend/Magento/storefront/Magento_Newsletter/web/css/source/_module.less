@@ -15,7 +15,7 @@
         .content{
             .lib-vendor-prefix-display(flex);
             .lib-vendor-prefix-justify-content(space-between);
-            align-items:center;
+            .lib-vendor-box-align(center);
         }
 
         .newsletter_info{
@@ -99,9 +99,9 @@
             position: relative;
 
             a{
-                display: flex;
+                .lib-vendor-prefix-display(flex);
                 text-decoration: none;
-                align-items:end;
+                .lib-vendor-box-align(end);
 
                 &:hover{
                     h2{
@@ -132,7 +132,7 @@
                 padding: 0;
             }
             li {
-                padding-bottom: 15px;
+                padding-bottom: @indent__xs * 3;
                 margin: 0;
                 outline: 0;
                 list-style: none;
@@ -197,11 +197,11 @@
         }
         .copyright-links {
             .lib-vendor-prefix-display(flex);
-            flex-wrap: wrap;
+            .lib-vendor-prefix-flex-wrap(wrap);
             text-align: center;
             ul {
                 padding-left: 0;
-                margin-left: -5px;
+                margin-left: @indent__xs * (-1);
                 list-style: none;
             }
             li {
@@ -283,8 +283,8 @@
 
         .footer-copyright {
             .lib-vendor-prefix-justify-content(space-between);
-            flex-direction: row;
-            align-items: center;
+            .lib-vendor-prefix-flex-direction(row);
+            .lib-vendor-box-align(center);
         }
         .copyright-links {
             margin-bottom: 0;
@@ -320,8 +320,8 @@
         .footer-copyright{
             .lib-vendor-prefix-display(flex);
             .lib-vendor-prefix-justify-content(center);
-            flex-direction: column;
-            align-items: center;
+            .lib-vendor-prefix-flex-direction(column);
+            .lib-vendor-box-align(center);
         }
     }
 }
@@ -332,7 +332,7 @@
         background: @color-elogic-baner;
 
         .content{
-            flex-direction:column;
+            .lib-vendor-prefix-flex-direction(column);
         }
 
         .newsletter_info{
@@ -362,8 +362,8 @@
         .footer-copyright {
             .lib-vendor-prefix-display(flex);
             .lib-vendor-prefix-justify-content(center);
-            flex-direction: column;
-            align-items: center;
+            .lib-vendor-prefix-flex-direction(column);
+            .lib-vendor-box-align(center);
         }
 
     }

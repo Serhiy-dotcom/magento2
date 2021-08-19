@@ -24,7 +24,7 @@
             .control {
                 .addon {
                     input {
-                        flex-basis: auto;
+                        .lib-vendor-prefix-flex-basis(auto);
                         width: 100%;
                     }
                 }
@@ -54,15 +54,15 @@
 
                     #search{
                         width: 360px;
-                        background-color: #222;
-                        padding: 7px 45px 7px 25px;
+                        background-color: @color-elogic-black;
+                        padding: 7px @indent__xs * 9 7px @indent__m;
                         height: auto;
-                        color:#888;
+                        color:@color-elogic-icon-gray;
                         cursor: text;
                         box-shadow:none;
 
                         &::placeholder{
-                            color:#888;
+                            color:@color-elogic-icon-gray;
                         }
 
                         &:focus,
@@ -73,7 +73,7 @@
 
                     .action{
                         &.search{
-                            color: #fff;
+                            color: @color-elogic-primary-white;
                             opacity: 1;
                         }
                     }
@@ -130,8 +130,8 @@
         }
 
         input {
-            font-size: 16px;
-            margin: 15px 0;
+            .lib-font-size(16px);
+            margin: @indent__xs * 3 0;
         }
 
         .nested {
@@ -141,7 +141,7 @@
 
     .search-autocomplete {
         display: none;
-        margin-top: -15px;
+        margin-top: @indent__xs * (-3);
         overflow: hidden;
         position: absolute;
         z-index: 3;
@@ -191,7 +191,7 @@
                     position: relative;
 
                     .control {
-                        padding-right: 25px;
+                        padding-right: @indent__m;
 
                         &:after {
                             content: ' \2013 ';
@@ -217,7 +217,7 @@
 
                 &.with-addon {
                     .control {
-                        padding-right: 45px;
+                        padding-right: @indent__xs * 9;
                     }
                 }
 
@@ -279,7 +279,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .block-search {
         float: right;
-        padding-left: 15px;
+        padding-left: @indent__xs * 3;
         position: relative;
         z-index: 4;
 
@@ -296,7 +296,7 @@
         input {
             .lib-input-placeholder(@form-element-input-placeholder__color);
             margin: 0;
-            padding-right: 35px;
+            padding-right: @indent__l + @indent__xs;
             position: static;
         }
 
@@ -350,7 +350,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .block-search {
         float: right;
-        padding-left: 15px;
+        padding-left: @indent__xs * 3;
         position: relative;
         z-index: 4;
 
@@ -367,7 +367,7 @@
         input {
             .lib-input-placeholder(@form-element-input-placeholder__color);
             margin: 0;
-            padding-right: 35px;
+            padding-right: @indent__l + @indent__xs;
             position: static;
         }
 

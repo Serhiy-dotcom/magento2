@@ -331,6 +331,21 @@
         .lib-vendor-prefix-justify-content(space-between);
         margin-top: @indent__l * 3;
         .lib-vendor-prefix-flex-wrap(wrap);
+
+        .group_item{
+            &:hover{
+                .slick-arrow{
+                    opacity:1;
+                    visibility: visible;
+                }
+            }
+
+            .slick-arrow{
+                opacity:0;
+                visibility: hidden;
+                transition: all 0.2s linear;
+            }
+        }
     }
     .group_item {
         width: 32%;
@@ -406,6 +421,7 @@
         .lib-vendor-prefix-display(flex);
         .lib-vendor-prefix-flex-direction(column);
         position: relative;
+        margin: @indent__xl * 2 auto;
     }
     .shop_header {
         .lib-vendor-prefix-display(flex);
@@ -433,7 +449,7 @@
         .lib-vendor-prefix-justify-content(space-around);
     }
     .brand_icon {
-        .lib-vendor-prefix-display(flex);
+        display:flex !important;//need to overwrite slider default styles
         .lib-vendor-prefix-flex-direction(column);
         .lib-vendor-box-align(center);
         a {
@@ -891,7 +907,14 @@
 
 
     //------Bestsellers/Features/Most Viewed------
-
+    .products-group{
+        .group_item{
+            .slick-arrow{
+                opacity:1;
+                visiblity:visible;
+            }
+        }
+    }
 
 
     //----------------News & Blog---------------
@@ -1011,7 +1034,15 @@
 
 
     //------Bestsellers/Features/Most Viewed------
-
+    .products_group {
+        .group_item{
+            .slick-arrow{
+                opacity:1;
+                visibility: visible;
+            }
+        }
+    }
+    
 
 
     //----------------News & Blog---------------
@@ -1086,7 +1117,6 @@
 
 
     //------Bestsellers/Features/Most Viewed------
-
 
 
     //----------------News & Blog---------------

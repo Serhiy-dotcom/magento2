@@ -33,11 +33,8 @@
             "sliderOptions":{
                 "slidesToShow": 4,
                 "slidesToScroll": 4,
-                "infinite": false,
                 "dots": false,
                 "arrows": true,
-                "autoplay": false,
-                "autoplaySpeed": 5000,
                 "responsive": [
                     {
                         "breakpoint": 1024,
@@ -58,6 +55,113 @@
                         "settings": {
                             "slidesToShow": 1,
                             "slidesToScroll": 1
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    }
+</script>
+
+
+
+<php
+/*Products Group*/
+/*
+"dots": false,
+"arrows": true,
+"slidesToShow": 6,
+"slidesToScroll": 3
+"rows":3,
+"slidesPerRow": 1,
+*/
+?>
+<script type="text/x-magento-init">
+    {
+    ".products_group": {
+        "sliderPath": {
+            "selector":".group_item_content .product-items",
+            "sliderOptions":{
+                "dots": false,
+                "arrows": true,
+                "rows": 3,
+                "slidesToShow": 1,
+		        "slidesToScroll": 1
+            }
+        }
+    }
+    }
+</script>
+
+
+<php
+/*News & Blog*/
+?>
+<script type="text/x-magento-init">
+    {
+    ".news_blog": {
+        "sliderPath": {
+            "selector":".news",
+            "sliderOptions":{
+                "slidesToShow": 3,
+                "slidesToScroll": 2,
+                "dots": false,
+                "arrows": true,
+                "responsive": [
+                    {
+                        "breakpoint": 992,
+                        "settings": {
+                            "slidesToShow": 2,
+                            "slidesToScroll": 2
+                        }
+                    },
+                    {
+                        "breakpoint": 480,
+                        "settings": {
+                            "slidesToShow": 1,
+                            "slidesToScroll": 1
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    }
+</script>
+
+
+<php
+/*Shop By Brands*/
+?>
+<script type="text/x-magento-init">
+    {
+    ".brand_shop": {
+        "sliderPath": {
+            "selector":".brand_icons",
+            "sliderOptions":{
+                "slidesToShow": 5,
+                "slidesToScroll": 1,
+                "centerMode": true,
+                "dots": true,
+                "autoplay": true,
+                "responsive": [
+                    {
+                        "breakpoint": 992,
+                        "settings": {
+                            "slidesToShow": 4
+                        }
+                    },
+                    {
+                        "breakpoint": 768,
+                        "settings": {
+                            "slidesToShow": 3
+                        }
+                    },
+                    {
+                        "breakpoint": 480,
+                        "settings": {
+                            "slidesToShow": 1
                         }
                     }
                 ]

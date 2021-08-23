@@ -51,7 +51,7 @@
             top: 0;
             margin-left: auto;
             margin-right: auto;
-            display:flex;
+            .lib-vendor-prefix-display(flex);
             height:inherit;
             width:auto !important;//using !important cause I cannot overwrite default slider styles without it
 
@@ -78,10 +78,10 @@
 
             >div{
                 width: 100vw;
-                display: flex;
-                justify-content: center;
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-prefix-justify-content(center);
                 height: inherit;
-                align-items: center;
+                .lib-vendor-box-align(center);
             }
 
             [dir="rtl"] & {
@@ -116,7 +116,7 @@
         }
 
         .slick-dots {
-            display: flex;
+            .lib-vendor-prefix-display(flex);
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -272,7 +272,7 @@
             }
 
             &.custom__next {
-                padding-left: 15px;
+                padding-left: @indent__xs * 3;
             }
         }
 
@@ -427,16 +427,16 @@
             .lib-css(color, @color-elogic-black);
             .lib-css(font-weight, @font-weight__light);
             cursor: pointer;
-            font-size:12px;
+            font-size:@font-size__s;
 
             &.custom__prev {
                 right: 63px;
                 border-right: 1px solid @color-elogic-black;
-                padding-right: 15px;
+                padding-right: @indent__xs * 3;
             }
 
             &.custom__next {
-                padding-left: 15px;
+                padding-left: @indent__xs * 3;
             }
         }
 
@@ -496,7 +496,7 @@
             position: relative;
             overflow: hidden;
             display: block;
-            margin-right:-30px;
+            margin-right:@indent__l * (-1);
             padding: 0;
 
             &:focus {
@@ -545,7 +545,7 @@
             float: left;
             height: 100%;
             min-height: 1px;
-            margin-right:30px;
+            margin-right:@indent__l;
 
             [dir="rtl"] & {
                 float: right;
@@ -595,11 +595,11 @@
             &.custom__prev {
                 right: 63px;
                 border-right: 1px solid @color-elogic-black;
-                padding-right: 15px;
+                padding-right: @indent__xs * 3;
             }
 
             &.custom__next {
-                padding-left: 15px;
+                padding-left: @indent__xs * 3;
             }
         }
 
@@ -757,16 +757,16 @@
             &.custom__prev {
                 right: 78px;
                 border-right: 1px solid @color-elogic-black;
-                padding-right: 15px;
+                padding-right: @indent__xs * 3;
             }
 
             &.custom__next {
-                padding-left: 15px;
+                padding-left: @indent__xs * 3;
             }
         }
 
         .slick-dots {
-            display: flex;
+            .lib-vendor-prefix-display(flex);
             position: absolute;
             bottom: -80px;
             left: 50%;

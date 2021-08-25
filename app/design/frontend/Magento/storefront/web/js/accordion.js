@@ -23,8 +23,6 @@ define([
         },
 
         _create: function() {
-            console.log('Ready');
-
             var currentElement = $(this.element);
 
             mediaCheck({

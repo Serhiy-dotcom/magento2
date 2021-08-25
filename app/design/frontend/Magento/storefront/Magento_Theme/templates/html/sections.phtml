@@ -1,15 +1,10 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-/**
- *  General template for displaying group of blocks divided into sections
- */
-
 $group = $block->getGroupName();
 $groupCss = $block->getGroupCss();
+
+/*
+Added icon and added to it script for closing burger menu
+*/
 ?>
 <?php if ($detailedInfoGroup = $block->getGroupChildNames($group)):?>
     <div class="sections <?= $block->escapeHtmlAttr($groupCss) ?>">

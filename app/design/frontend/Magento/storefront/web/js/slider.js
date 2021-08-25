@@ -17,8 +17,6 @@ define([
         },
 
         _create: function () {
-            console.log(`Ready slider - ${this.options.selector}`);
-
             $(this.options.selector).slick(this.options.sliderOptions);
 
 

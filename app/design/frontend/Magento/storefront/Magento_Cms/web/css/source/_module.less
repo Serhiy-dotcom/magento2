@@ -73,7 +73,7 @@
         margin: 0 auto;
         width: 60%;
         .lib-vendor-prefix-display(flex);
-        justify-content: space-between;
+        .lib-vendor-prefix-justify-content(space-between);
         .lib-vendor-box-align(center);
         max-width: 850px;
         img {
@@ -141,14 +141,14 @@
     }
     .categories_container {
         .lib-vendor-prefix-display(flex);
-        justify-content: space-between;
+        .lib-vendor-prefix-justify-content(space-between);
     }
     .cat_elem {
         width: 46%;
         background-color: @color-elogic-baner;
         padding: 0 @indent__xl 0 0;
         .lib-vendor-prefix-display(flex);
-        justify-content: space-between;
+        .lib-vendor-prefix-justify-content(space-between);
 
         img{
             width: 70%;
@@ -159,7 +159,7 @@
         .lib-vendor-prefix-display(flex);
         .lib-vendor-prefix-flex-direction(column);
         height: inherit;
-        justify-content: center;
+        .lib-vendor-prefix-justify-content(center);
         img {
             display: none;
         }
@@ -260,7 +260,7 @@
     }
     .sale_text {
         .lib-vendor-prefix-display(flex);
-        justify-content: space-between;
+        .lib-vendor-prefix-justify-content(space-between);
         margin: 0 auto;
         height: 100%;
         .lib-vendor-box-align(center);
@@ -301,7 +301,7 @@
     //------Bestsellers/Features/Most Viewed------
     .products_group {
         .lib-vendor-prefix-display(flex);
-        justify-content: space-between;
+        .lib-vendor-prefix-justify-content(space-between);
         margin-top: @indent__l * 3;
         .lib-vendor-prefix-flex-wrap(wrap);
     }
@@ -322,6 +322,50 @@
         padding-top: 35px;
     }
 
+
+
+    //----------------News & Blog---------------
+    .news_blog{
+        .products_header{
+            padding:0;
+
+            &::after{
+                left:0;
+            }
+        }
+    }
+
+    .news{
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-justify-content(space-between);
+        .lib-vendor-prefix-flex-wrap(wrap);
+    }
+
+    .news_item{
+        width: 32%;
+
+        h4{
+            text-transform: uppercase;
+            margin: @indent__base 0;
+        }
+
+        p{
+            color: @color-elogic-additional-info;
+            letter-spacing: .25px;
+        }
+    }
+
+    .news_date{
+        font-style: italic;
+        color: @color-elogic-additional-info;
+        .lib-font-size(@font-size-average);
+        margin-bottom: @indent__s + @indent__xs;
+
+        .far.fa-calendar-alt{
+            .lib-font-size(@font-size-medium);
+            margin-right: 8px;
+        }
+    }
 }
 
 
@@ -357,6 +401,10 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+    //----------------News & Blog---------------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
@@ -434,6 +482,13 @@
     //------Bestsellers/Features/Most Viewed------
     .group_item{
         width:32%;
+    }
+
+
+
+    //----------------News & Blog---------------
+    .news_item {
+        width: 32%;
     }
 }
 
@@ -519,6 +574,13 @@
     //------Bestsellers/Features/Most Viewed------
     .group_item{
         width:100%;
+    }
+
+
+
+    //----------------News & Blog---------------
+    .news_item {
+        width: 48%;
     }
 }
 
@@ -612,6 +674,13 @@
     .group_item{
         width:100%;
     }
+
+
+
+    //----------------News & Blog---------------
+    .news_item {
+        width: 48%;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
@@ -659,6 +728,10 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+    //----------------News & Blog---------------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
@@ -743,7 +816,7 @@
         width: 100%;
         .lib-vendor-prefix-display(flex);
         .lib-vendor-prefix-flex-direction(column);
-        justify-content: center;
+        .lib-vendor-prefix-justify-content(center);
         .lib-vendor-box-align(center);
         text-align: center;
         a {
@@ -765,6 +838,12 @@
 
     //------Bestsellers/Features/Most Viewed------
 
+
+
+    //----------------News & Blog---------------
+    .news_item {
+        width: 100%;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
@@ -794,7 +873,7 @@
         width: 100%;
         .lib-vendor-prefix-display(flex);
         .lib-vendor-prefix-flex-direction(column);
-        justify-content: center;
+        .lib-vendor-prefix-justify-content(center);
         .lib-vendor-box-align(center);
         text-align: center;
         a {
@@ -816,4 +895,9 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+
+    //----------------News & Blog---------------
 }

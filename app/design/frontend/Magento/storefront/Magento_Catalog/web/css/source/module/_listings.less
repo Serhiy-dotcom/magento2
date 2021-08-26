@@ -319,24 +319,24 @@
 
         a{
             transition: all 0.2s linear;
-            font-weight:300;
+            font-weight:@font-weight__lighter;
 
             &:hover{
-                color:#222;
+                color:@color-elogic-black;
                 text-decoration:underline;
             }
         }
 
         .items{
             strong{
-                color:#222;
-                font-weight:400;
+                color:@color-elogic-black;
+                font-weight:@font-weight__regular;
             }
 
             item{
                 &:not(:last-child){
                     &::after{
-                        color: #a3a3a3;
+                        color: @color-elogic-additional-info;
                     }
                 }
             }
@@ -345,22 +345,22 @@
 
     .page-wrapper{
         .product-items{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-wrap(wrap);
+            .lib-vendor-prefix-justify-content(space-between);
 
             li{
                 width:31%;
-                margin-bottom: 60px;
+                margin-bottom: @indent__l * 2;
             }
 
             .product-item-details{
                 text-align:center;
-                margin-top:20px;
+                margin-top:@indent__base;
             }
 
             .price-box{
-                margin: 10px 0;
+                margin: @indent__s 0;
             }
         }
     }
@@ -368,7 +368,7 @@
     #maincontent{
         max-width: 1280px;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 @indent__base;
         margin: 0 auto;
 
         .base{
@@ -381,19 +381,19 @@
     //Toolbar
     .toolbar-left{
         float:left;
-        align-items: center;
-        display: flex;
+        .lib-vendor-box-align(center);
+        .lib-vendor-prefix-display(flex);
     }
 
     .toolbar-right{
         float:right;
         height: 35px;
-        border-bottom: 1px solid #888;
+        border-bottom: 1px solid @color-elogic-nav-hover;
         letter-spacing: 1px;
-        margin-bottom: 10px;
+        margin-bottom: @indent__s;
         text-transform: uppercase;
         font-size: 14px;
-        color: #222;
+        color: @color-elogic-black;
     }
 
     .toolbar-sorter{
@@ -414,24 +414,24 @@
 
             .select2-selection--single{
                 height: 32px;
-                display: flex;
-                align-items: center;
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-box-align(center);
 
                 #select2-sorter-container{
                     font-size: 13px;
-                    color: #7d7d7d;
+                    color: @color-elogic-basic-arrow;
                 }
 
                 .select2-selection__arrow{
-                    display: flex;
-                    align-items: center;
+                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-box-align(center);
                     height: inherit;
 
                     &::before{
                         content: "\f107";
-                        font-family: 'FontAwesome';
+                        font-family: @font-family-awesome;
                         font-size: 15px;
-                        color: #7d7d7d;
+                        color: @color-elogic-basic-arrow;
                     }
 
                     b{
@@ -446,7 +446,7 @@
         .sorter-action{
             &::before{
                 font-size:14px;
-                margin-left: 5px;
+                margin-left: @indent__xs;
             }
         }
     }
@@ -458,37 +458,37 @@
             border: 0;
             border-radius: 0;
             padding: 8px;
-            margin-right:5px;
+            margin-right:@indent__xs;
             background-color:#eee;
             transition:all 0.2s linear;
             cursor:pointer;
 
             &::before{
-                color:#7d7d7d;
+                color:@color-elogic-basic-arrow;
             }
 
             &:hover{
-                background-color:#222;
+                background-color:@color-elogic-black;
 
                 &::before{
-                    color:#fff;
+                    color:@color-elogic-primary-white;
                 }
             }
 
             &.active{
-                background-color: #222;
+                background-color: @color-elogic-black;
                 cursor:default;
 
                 &:hover{
-                    background-color:#222;
+                    background-color:@color-elogic-black;
 
                     &::before{
-                        color:#fff;
+                        color:@color-elogic-primary-white;
                     }
                 }
 
                 &::before{
-                    color:#fff;
+                    color:@color-elogic-primary-white;
                 }
             }
         }
@@ -496,27 +496,23 @@
 
     .select2-container{
         .select2-dropdown{
-            border: 1px solid #222;
+            border: 1px solid @color-elogic-black;
             border-radius: 0;
 
             .select2-results{
                 li{
                     margin-bottom:0;
-                    background-color:#fff;
-                    color:#222;
+                    background-color:@color-elogic-primary-white;
+                    color:@color-elogic-black;
 
                     &:hover{
-                        background-color:#222;
-                        color:#fff;
+                        background-color:@color-elogic-black;
+                        color:@color-elogic-primary-white;
                     }
                 }
             }
         }
     }
-
-
-    //Sidebar
-
 }
 
 //

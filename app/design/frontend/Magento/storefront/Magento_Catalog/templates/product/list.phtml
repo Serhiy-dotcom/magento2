@@ -49,10 +49,10 @@ $_helper = $block->getData('outputHelper');
     ?>
 
     <div class="products wrapper <?= /* @noEscape */ $viewMode ?> products-<?= /* @noEscape */ $viewMode ?>">
-        <ol class="products list items product-items">
+        <ol class="products list items product-items category-products">
             <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
             <?php foreach ($_productCollection as $_product): ?>
-                <li class="item product product-item">
+                <li class="item product product-item category-product">
                     <div class="product-item-info"
                          id="product-item-info_<?= /* @noEscape */ $_product->getId() ?>"
                          data-container="product-<?= /* @noEscape */ $viewMode ?>">
@@ -113,6 +113,7 @@ $_helper = $block->getData('outputHelper');
                                                         disabled>
                                                     <span><?= $escaper->escapeHtml(__('Add to Cart')) ?></span>
                                                 </button>
+                                                <?= /* @noEscape */ $block->getProductPrice($_product) ?>
                                             </form>
                                         <?php else:?>
                                             <?php if ($_product->isAvailable()):?>
@@ -130,6 +131,8 @@ $_helper = $block->getData('outputHelper');
                                             'product-item-info_' . $_product->getId() . ' div.actions-primary'
                                         ) : '' ?>
                                     <div data-role="add-to-links" class="actions-secondary">
+                                        <a href="<?= $escaper->escapeUrl($_product->getProductUrl()) ?>" class="action quickviewproduct" title="<?= $block->escapeHtmlAttr(__('Quick view')) ?>">
+                                        </a>
                                         <?php if ($addToBlock = $block->getChildBlock('addto')): ?>
                                             <?= $addToBlock->setProduct($_product)->getChildHtml() ?>
                                         <?php endif; ?>

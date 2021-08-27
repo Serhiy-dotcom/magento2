@@ -344,12 +344,12 @@
     }
 
     .page-wrapper{
-        .product-items{
+        .product-list-items{
             .lib-vendor-prefix-display(flex);
             .lib-vendor-prefix-flex-wrap(wrap);
             .lib-vendor-prefix-justify-content(space-between);
 
-            li{
+            >li{
                 width:31%;
                 margin-bottom: @indent__l * 2;
             }
@@ -618,166 +618,356 @@
 
     //Category Products
     .category-products{
-        .product-items{
-            .lib-vendor-prefix-display(flex);
-            .lib-vendor-prefix-justify-content(space-between);
-            list-style: none;
-            padding-left: 0;
-        }
+        &.product-list-items{
+            .item{
+                width:100%;
+                display:flex;
 
-        .product-item{
-            text-align:center;
-            width: 24%;
-            min-width: 100px;
-            height: max-content;
-
-            a{
-                display: inline-block;
-                width: 100%;
-                transition:all 0.2s linear;
-
-                .product-image-container{
-                    //I use !important because this class have element style which I can't overwrite no matter how many nestings I do
-                    width:100% !important;
-                }
-            }
-        }
-
-        .product-item-info{
-            position:relative;
-
-            &:hover{
-                .actions-secondary{
-                    opacity:1;
-                    top:40%;
-                }
-
-                .product-item-photo-hovered{
-                    opacity:1;
-                }
-
-                .actions-primary{
-                    form{
-                        .action{
-                            opacity:1;
-                            left:50%;
-                        }
-
-                        .price-box{
-                            opacity:0;
-                            margin-left:50%;
-                        }
-                    }
-                }
-            }
-        }
-
-        .product-item-details{
-            .price-box{
-                display:none;
-            }
-        }
-
-        .product-item-photo-hovered{
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity:0;
-            z-index:1;
-        }
-
-        .product-item-details{
-            margin: @indent__m 0 0;
-            text-align: center;
-        }
-
-        .actions-primary{
-            display:block;
-
-            form{
-                .lib-vendor-prefix-display(flex);
-                .lib-vendor-prefix-justify-content(center);
-                position: relative;
-
-                .action{
-                    opacity:0;
-                    background-color: transparent;
-                    color: @color-elogic-black;
-                    border-bottom: 1px @color-elogic-black solid;
-                    border-radius: 0;
-                    border-top: none;
-                    border-right: none;
-                    border-left: none;
-                    text-transform: uppercase;
-                    font-family: @font-family__oswald;
-                    font-weight: 500;
-                    padding: 9px 0;
-                    letter-spacing: 1px;
-                    transform: translateX(-50%);
-                    transition:all 0.2s linear;
-                    position:absolute;
-                    top:5px;
-                    left: 20%;
-                }
-
-                .price-box{
+                .product-item-info{
+                    width:100%;
                     display:flex;
-                    width:auto;
-                    opacity: 1;
-                    transition:all 0.2s linear;
-                }
-            }
-        }
 
-        .actions-secondary{
-            display:block;
-            width: max-content;
-            position: absolute;
-            left: 50%;
-            top:80%;
-            transform: translate3d(-50%, -50%, 0);
-            background-color: rgba(255,255,255,.96);
-            z-index: 10;
-            padding: @indent__l 0px;
-            opacity:0;
-            transition:all 0.25s linear;
-        }
-
-        .product-item {
-            .actions-secondary{
-                .action{
-                    color:@color-elogic-black;
-                    .lib-font-size(@font-size-medium);
-                    transition:all 0.2s linear;
-                    text-decoration:none;
-
-                    &:hover{
-                        color:@color-elogic-nav-hover;
+                    >.product-item-photo{
+                        max-width:305px;
                     }
 
-                    &::before{
-                        font-family: @font-family-awesome;
-                    }
-
-                    span{
+                    .product-item-photo-hovered{
                         display:none;
                     }
-                }
 
-                .quickviewproduct::before{
-                    content:'\f06e';
-                }
+                    .actions-secondary{
+                        display:none;
+                    }
 
-                .towishlist {
-                    margin: @indent__m - @indent__xs 0;
+                    .product-item-details{
+                        margin-top:0;
+                        margin-left:30px;
+                        text-align:left;
+                        width:inherit;
 
-                    &::before{
-                        content: '\f004';
+                        .product-item-link{
+                            color: #222;
+                            font-size: 18px;
+                            text-transform: capitalize;
+                        }
+
+                        .product-item-description{
+                            >p,
+                            >ul{
+                                font-size:13px;
+                                font-weight:300;
+                                color:#888;
+                            }
+
+                            >ul{
+                                margin: 20px 0 30px;
+                                list-style: none;
+                                padding: 0;
+                                line-height: 15px;
+                            }
+                        }
+
+                        .more{
+                            display:none;
+                        }
+
+                        .product-item-inner{
+                            display: flex;
+                            flex-direction: column-reverse;
+                            margin-top: 20px;
+                        }
                     }
                 }
+            }
 
-                .tocompare::before{
-                    content:'\f24e';
+            &.product-grid-items{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .product-item{
+                    width:31%;
+                    margin-bottom:50px;
+                }
+            }
+
+            .product-item{
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    transition:all 0.2s linear;
+
+                    .product-image-container{
+                        //I use !important because this class have element style which I can't overwrite no matter how many nestings I do
+                        width:100% !important;
+                    }
+                }
+            }
+
+            .product-item-details{
+                .price-box{
+                    display:none;
+                }
+            }
+
+            .product-item-photo-hovered{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity:0;
+                z-index:1;
+            }
+
+            .product-item-details{
+                margin: @indent__m 0 0;
+                text-align: center;
+            }
+
+            .actions-primary{
+                display:block;
+
+                form{
+                    .lib-vendor-prefix-display(flex);
+
+                    .action{
+                        background-color: #222;
+                        color: #fff;
+                        border:none;
+                        border-radius: 0;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        padding: 15px 25px;
+                        letter-spacing: 1px;
+                        transition:all 0.2s linear;
+                        width:max-content;
+
+                        &:hover{
+                            background-color:#888;
+                        }
+                    }
+
+                    .price-box{
+                        display:flex;
+                        width:max-content;
+                        flex-direction:column;
+                    }
+                }
+            }
+
+            .actions-secondary{
+                display:block;
+                width: max-content;
+                position: absolute;
+                left: 50%;
+                top:80%;
+                transform: translate3d(-50%, -50%, 0);
+                background-color: rgba(255,255,255,.96);
+                z-index: 10;
+                padding: @indent__l 0px;
+                opacity:0;
+                transition:all 0.25s linear;
+            }
+
+            .product-item {
+                .actions-secondary{
+                    .action{
+                        color:@color-elogic-black;
+                        .lib-font-size(@font-size-medium);
+                        transition:all 0.2s linear;
+                        text-decoration:none;
+
+                        &:hover{
+                            color:@color-elogic-nav-hover;
+                        }
+
+                        &::before{
+                            font-family: @font-family-awesome;
+                        }
+
+                        span{
+                            display:none;
+                        }
+                    }
+
+                    .quickviewproduct::before{
+                        content:'\f06e';
+                    }
+
+                    .towishlist {
+                        margin: @indent__m - @indent__xs 0;
+
+                        &::before{
+                            content: '\f004';
+                        }
+                    }
+
+                    .tocompare::before{
+                        content:'\f24e';
+                    }
+                }
+            }
+        }
+
+
+        &.product-grid-items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            .product-item{
+                width:31%;
+                margin-bottom:50px;
+                min-width: 100px;
+                text-align:center;
+
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    transition:all 0.2s linear;
+
+                    .product-image-container{
+                        //I use !important because this class have element style which I can't overwrite no matter how many nestings I do
+                        width:100% !important;
+                    }
+                }
+            }
+
+            .product-item-info{
+                position:relative;
+
+                &:hover{
+                    .actions-secondary{
+                        opacity:1;
+                        top:40%;
+                    }
+
+                    .product-item-photo-hovered{
+                        opacity:1;
+                    }
+
+                    .actions-primary{
+                        form{
+                            .action{
+                                opacity:1;
+                                left:50%;
+                            }
+
+                            .price-box{
+                                opacity:0;
+                                margin-left:50%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .product-item-details{
+                .price-box{
+                    display:none;
+                }
+            }
+
+            .product-item-photo-hovered{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity:0;
+                z-index:1;
+            }
+
+            .product-item-details{
+                margin: @indent__m 0 0;
+                text-align: center;
+            }
+
+            .actions-primary{
+                display:block;
+
+                form{
+                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-prefix-justify-content(center);
+                    position: relative;
+
+                    .action{
+                        opacity:0;
+                        background-color: transparent;
+                        color: @color-elogic-black;
+                        border-bottom: 1px @color-elogic-black solid;
+                        border-radius: 0;
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
+                        text-transform: uppercase;
+                        font-family: @font-family__oswald;
+                        font-weight: 500;
+                        padding: 9px 0;
+                        letter-spacing: 1px;
+                        transform: translateX(-50%);
+                        transition:all 0.2s linear;
+                        position:absolute;
+                        top:5px;
+                        left: 20%;
+                    }
+
+                    .price-box{
+                        display:flex;
+                        width:auto;
+                        opacity: 1;
+                        transition:all 0.2s linear;
+                    }
+                }
+            }
+
+            .actions-secondary{
+                display:block;
+                width: max-content;
+                position: absolute;
+                left: 50%;
+                top:80%;
+                transform: translate3d(-50%, -50%, 0);
+                background-color: rgba(255,255,255,.96);
+                z-index: 10;
+                padding: @indent__l 0px;
+                opacity:0;
+                transition:all 0.25s linear;
+            }
+
+            .product-item {
+                .actions-secondary{
+                    .action{
+                        color:@color-elogic-black;
+                        .lib-font-size(@font-size-medium);
+                        transition:all 0.2s linear;
+                        text-decoration:none;
+
+                        &:hover{
+                            color:@color-elogic-nav-hover;
+                        }
+
+                        &::before{
+                            font-family: @font-family-awesome;
+                        }
+
+                        span{
+                            display:none;
+                        }
+                    }
+
+                    .quickviewproduct::before{
+                        content:'\f06e';
+                    }
+
+                    .towishlist {
+                        margin: @indent__m - @indent__xs 0;
+
+                        &::before{
+                            content: '\f004';
+                        }
+                    }
+
+                    .tocompare::before{
+                        content:'\f24e';
+                    }
                 }
             }
         }

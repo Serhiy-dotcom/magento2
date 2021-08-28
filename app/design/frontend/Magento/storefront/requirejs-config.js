@@ -4,7 +4,8 @@ var config = {
         select: 'js/plugins/select2.full',
         'accordionPath': 'js/accordion',
         'sliderPath': 'js/slider',
-        'selectPath': 'js/select'
+        'selectPath': 'js/select',
+        'giftrPath': 'js/giftr'
     },
     shim: {
         slick: {
@@ -12,6 +13,13 @@ var config = {
         },
         select: {
             deps: ['jquery']
+        }
+    },
+    config: {
+        mixins: {
+            'Mirasvit_Giftr/js/item': {
+                'js/itemMixin': true
+            }
         }
     }
 };

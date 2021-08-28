@@ -3,15 +3,19 @@
 //  _____________________________________________
 & when (@media-common = true) {
     //--------------Common-------------
-    .page-wrapper{
-        overflow-x: hidden;
+    .cms-home{
+        .page-wrapper{
+            overflow-x: hidden;
 
-        .page-main{
-            max-width: 1920px;
-            padding-left:0;
-            padding-right:0;
-            .block{
-                margin-bottom:0;
+            .page-main{
+                max-width: 1920px;
+                padding-left:0;
+                padding-right:0;
+                width:-moz-available;
+
+                .block{
+                    margin-bottom:0;
+                }
             }
         }
     }

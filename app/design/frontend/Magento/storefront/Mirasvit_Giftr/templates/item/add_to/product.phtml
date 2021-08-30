@@ -25,7 +25,7 @@ if ($block->getProduct()->getUseInGiftr()):
             </a>
         <?php else: ?>
             <div class="giftr-link togiftr" data-bind="scope: 'giftr-addto__form'">
-                <a href="#" id="addto-giftr" class="action togiftr link-giftr" data-bind="click: defineBehaviour"><span><?= $block->getLabel() ?></span>
+                <a href="#" id="addto-giftr" class="action togiftr link-giftr" data-bind="click: toRedirect"><span><?= $block->getLabel() ?></span>
                 </a>
             </div>
 

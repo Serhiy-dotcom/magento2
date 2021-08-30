@@ -16,17 +16,7 @@ define([
         },
 
         _create: function(){
-            this._on('.giftr-link', {
-                click: this._handleClick
-            })
-        },
-
-        _handleClick: function(e){
-            e.preventDefault();
-
-            $(this.element).modal(this.options.modalOptions)
-
-            $(this.element).modal('openModal');
+            $('.giftr-list').modal(this.options.modalOptions)
         }
     })
 

@@ -76,18 +76,10 @@
                     &.active{
                         max-height: 240px;
                         opacity: 1;
-                        overflow-y: scroll;
                     }
 
                     &::-webkit-scrollbar{
-                        width: 8px;
-                        background: #0d141f;
-                        border-radius: 0 8px 8px 0;
-                    }
-
-                    &::-webkit-scrollbar-thumb{
-                        background: #525861;
-                        border-radius: 0 8px 8px 0;
+                        display:none;
                     }
                 }
 
@@ -112,6 +104,12 @@
                     cursor: pointer;
                 }
 
+                .title__giftr{
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-size: 22px;
+                }
+
                 .selected{
                     background: #2f3640;
                     border-radius: 8px;
@@ -126,14 +124,34 @@
                         font-family:@font-family-awesome;
                         background-size: contain;
                         background-repeat: no-repeat;
+                        transform: rotate(0deg);
 
                         position: absolute;
-                        height: 100%;
-                        width: 32px;
-                        right: 10px;
+                        height: auto;
+                        width: auto;
+                        right: 20px;
 
                         transition: all 0.4s;
                     }
+
+                    &.rotateArrow{
+                        &::after{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                #confirm-add-to-registry{
+                    margin: 20px auto 0;
+                    display: block;
+                    width: max-content;
+                    cursor: pointer;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: #fff;
+                    background-color: #222;
+                    padding: 15px 25px;
+                    font-weight: 500;
                 }
             }
         }

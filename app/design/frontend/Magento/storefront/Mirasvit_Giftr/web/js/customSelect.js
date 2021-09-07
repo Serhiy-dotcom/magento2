@@ -24,10 +24,6 @@ define([
             });
 
             $(document).on('click', `${optionsContainer} > label${optionsList}`, function(e){
-                console.log(e.currentTarget.lastElementChild.textContent);
-                console.log($(this));
-                console.log($(this).add(' span'));
-
                 $(selected).html(e.currentTarget.lastElementChild.textContent);
                 $(optionsContainer).removeClass('active');
             })

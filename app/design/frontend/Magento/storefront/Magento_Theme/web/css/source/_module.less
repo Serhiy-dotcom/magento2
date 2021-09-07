@@ -94,6 +94,45 @@
             .lib-css(background-color, @header-panel__background-color);
             .lib-css(color, @header-panel__text-color);
         }
+
+        .header{
+            &.content{
+                &.fixed {
+                    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+                    background: rgba(255, 255, 255, .95);
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 9999;
+                    width: 100%;
+                    max-width:inherit;
+                    -webkit-animation-name: fadeInDown;
+                    -webkit-animation-duration: 5s;
+                    -webkit-animation-timing-function: linear;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-animation-direction: normal;
+                    -webkit-animation-play-state: running;
+                    -webkit-animation-fill-mode: forwards;
+                    -moz-animation-name: anim_titles;
+                    -moz-animation-duration: 5s;
+                    -moz-animation-timing-function: linear;
+                    -moz-animation-iteration-count: infinite;
+                    -moz-animation-direction: normal;
+                    -moz-animation-play-state: running;
+                    -moz-animation-fill-mode: forwards;
+                    -webkit-animation-delay: 1s;
+                    -moz-animation-delay: 1s;
+                    -webkit-animation-iteration-count: 1;
+                    -moz-animation-iteration-count: 1;
+                    -webkit-animation-duration: .7s;
+                    -moz-animation-duration: .7s;
+                    -webkit-animation-delay: 0s;
+                    -moz-animation-delay: 0s;
+                    -webkit-animation-timing-function: ease-out;
+
+                }
+            }
+        }
     }
 
     .header.panel {

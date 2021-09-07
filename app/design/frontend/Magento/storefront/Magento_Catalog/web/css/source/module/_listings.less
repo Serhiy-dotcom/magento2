@@ -327,6 +327,222 @@
             .lib-vendor-prefix-justify-content(start);
         }
     }
+
+
+
+    //------Category Page------
+    .page-title-wrapper{
+        display:none;
+    }
+
+    .page-main{
+        .breadcrumbs{
+            padding:0;
+        }
+    }
+
+    .breadcrumbs{
+        a,
+        a:visited{
+            color:#333;
+        }
+
+        a{
+            transition: all 0.2s linear;
+            font-weight:@font-weight__lighter;
+
+            &:hover{
+                color:@color-elogic-black;
+                text-decoration:underline;
+            }
+        }
+
+        .items{
+            strong{
+                color:@color-elogic-black;
+                font-weight:@font-weight__regular;
+            }
+
+            item{
+                &:not(:last-child){
+                    &::after{
+                        color: @color-elogic-additional-info;
+                    }
+                }
+            }
+        }
+    }
+
+    .page-wrapper{
+        .product-items{
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-wrap(wrap);
+            .lib-vendor-prefix-justify-content(space-between);
+
+            li{
+                width:31%;
+                margin-bottom: @indent__l * 2;
+            }
+
+            .product-item-details{
+                text-align:center;
+                margin-top:@indent__base;
+            }
+
+            .price-box{
+                margin: @indent__s 0;
+            }
+        }
+    }
+
+    #maincontent{
+        max-width: 1280px;
+        width: 100%;
+        padding: 0 @indent__base;
+        margin: 0 auto;
+
+        .base{
+            display:none;
+        }
+    }
+
+
+
+    //Toolbar
+    .toolbar-left{
+        float:left;
+        .lib-vendor-box-align(center);
+        .lib-vendor-prefix-display(flex);
+    }
+
+    .toolbar-right{
+        float:right;
+        height: 35px;
+        border-bottom: 1px solid @color-elogic-nav-hover;
+        letter-spacing: 1px;
+        margin-bottom: @indent__s;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: @color-elogic-black;
+    }
+
+    .toolbar-sorter{
+        .sorter-label{
+            display:none;
+        }
+
+        .select2-container{
+            &.select2-container--open{
+                .select2-selection--single{
+                    .select2-selection__arrow{
+                        &::before{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+
+            .select2-selection--single{
+                height: 32px;
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-box-align(center);
+
+                #select2-sorter-container{
+                    font-size: 13px;
+                    color: @color-elogic-basic-arrow;
+                }
+
+                .select2-selection__arrow{
+                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-box-align(center);
+                    height: inherit;
+
+                    &::before{
+                        content: "\f107";
+                        font-family: @font-family-awesome;
+                        font-size: 15px;
+                        color: @color-elogic-basic-arrow;
+                    }
+
+                    b{
+                        display:none;
+                    }
+                }
+            }
+        }
+
+
+
+        .sorter-action{
+            &::before{
+                font-size:14px;
+                margin-left: @indent__xs;
+            }
+        }
+    }
+
+    .modes{
+        .modes-label +
+        .modes-mode,
+        .modes-mode:last-child{
+            border: 0;
+            border-radius: 0;
+            padding: 8px;
+            margin-right:@indent__xs;
+            background-color:#eee;
+            transition:all 0.2s linear;
+            cursor:pointer;
+
+            &::before{
+                color:@color-elogic-basic-arrow;
+            }
+
+            &:hover{
+                background-color:@color-elogic-black;
+
+                &::before{
+                    color:@color-elogic-primary-white;
+                }
+            }
+
+            &.active{
+                background-color: @color-elogic-black;
+                cursor:default;
+
+                &:hover{
+                    background-color:@color-elogic-black;
+
+                    &::before{
+                        color:@color-elogic-primary-white;
+                    }
+                }
+
+                &::before{
+                    color:@color-elogic-primary-white;
+                }
+            }
+        }
+    }
+
+    .select2-container{
+        .select2-dropdown{
+            border: 1px solid @color-elogic-black;
+            border-radius: 0;
+
+            .select2-results{
+                li{
+                    margin-bottom:0;
+                    background-color:@color-elogic-primary-white;
+                    color:@color-elogic-black;
+
+                    &:hover{
+                        background-color:@color-elogic-black;
+                        color:@color-elogic-primary-white;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //
@@ -345,6 +561,9 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+    //------Category Page------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
@@ -376,6 +595,10 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+    //------Category Page------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
@@ -404,6 +627,10 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+    //------Category Page------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
@@ -428,6 +655,10 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+    //------Category Page------
 }
 
 //
@@ -448,6 +679,10 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+    //------Category Page------
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
@@ -480,4 +715,8 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+
+
+
+    //------Category Page------
 }

@@ -4,6 +4,8 @@
 & when (@media-common = true) {
     //--------------Common-------------
     .page-wrapper{
+        overflow-x: hidden;
+
         .page-main{
             max-width: 1920px;
             padding-left:0;
@@ -43,7 +45,7 @@
         z-index: 10;
     }
 
-    .slider_btns a{
+    .prev-next-arrows{
         text-decoration: none;
         text-transform: uppercase;
         font-family:@font-family__poppins;
@@ -55,7 +57,7 @@
         .lib-font-size(@font-size-average);
     }
 
-    .slider_btns a:first-child{
+    .prev-next-arrows:first-child{
         border-right:@color-elogic-black 1px solid;
     }
 
@@ -68,14 +70,26 @@
         background-color: @color-elogic-baner;
         .lib-vendor-box-align(center);
         .lib-vendor-prefix-display(flex);
+        position: relative;
+    }
+    .baner-wrapper{
+        height: 100%;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        max-width:1920px;
     }
     .container {
         margin: 0 auto;
-        width: 60%;
-        .lib-vendor-prefix-display(flex);
+        width: 60% !important;//cannot overwrite slick slider styles
+        overflow-x: hidden;
+    }
+    .baner-item{
+        display:flex !important;//must use to rewrite default slick slider styles
         .lib-vendor-prefix-justify-content(space-between);
         .lib-vendor-box-align(center);
         max-width: 850px;
+        width:initial;
         img {
             width: 40%;
             height: max-content;
@@ -101,6 +115,20 @@
             letter-spacing: 0.2rem;
             font-weight: lighter;
             margin-bottom: @indent__s;
+
+            &.oswald{
+                font-family:@font-family__oswald;
+                .lib-font-size(25px);
+                display: flex;
+                flex-direction: column;
+
+                span{
+                    font-family:@font-family__poppins;
+                    font-weight: @font-weight__semibold;
+                    .lib-font-size(30px);
+                }
+            }
+
             span {
                 font-weight: @font-weight__semibold;
             }
@@ -127,7 +155,7 @@
             color: @color-elogic-additional-info;
             letter-spacing: 1.1px;
             margin:0 0 @indent__l 0;
-            font-weight: @font-weight__medium;
+            font-weight: @font-weight__regular;
         }
     }
 
@@ -304,6 +332,21 @@
         .lib-vendor-prefix-justify-content(space-between);
         margin-top: @indent__l * 3;
         .lib-vendor-prefix-flex-wrap(wrap);
+
+        .group_item{
+            &:hover{
+                .slick-arrow{
+                    opacity:1;
+                    visibility: visible;
+                }
+            }
+
+            .slick-arrow{
+                opacity:0;
+                visibility: hidden;
+                transition: all 0.2s linear;
+            }
+        }
     }
     .group_item {
         width: 32%;
@@ -379,6 +422,7 @@
         .lib-vendor-prefix-display(flex);
         .lib-vendor-prefix-flex-direction(column);
         position: relative;
+        margin: @indent__xl * 2 auto;
     }
     .shop_header {
         .lib-vendor-prefix-display(flex);
@@ -406,7 +450,7 @@
         .lib-vendor-prefix-justify-content(space-around);
     }
     .brand_icon {
-        .lib-vendor-prefix-display(flex);
+        display:flex !important;//need to overwrite slider default styles
         .lib-vendor-prefix-flex-direction(column);
         .lib-vendor-box-align(center);
         a {
@@ -426,6 +470,14 @@
         }
     }
 
+
+
+
+    //----------------Sidebar Slider---------------
+    .sidebar-slider{
+        margin: @indent__xl 0;
+    }
+
 }
 
 
@@ -435,12 +487,22 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl){
     //----------------Main Banner---------------
     .container{
-        width:80%;
+        width:80% !important;//cannot overwrite slick slider styles
+        display:flex !important;//cannot overwrite slick slider styles
+        justify-content:center;
     }
 
     .container_text {
         h1{
             .lib-font-size(33px);
+
+            &.oswald{
+                .lib-font-size(23px);
+
+                span{
+                    .lib-font-size(28px);
+                }
+            }
         }
 
         h6{
@@ -454,7 +516,7 @@
 
     .container {
         img{
-            width:70%;
+            width:45%;
             max-width:600px;
         }
     }
@@ -580,11 +642,15 @@
 
     //----------------Main Banner---------------
     .container{
-        width: 65%;
+        width: 65% !important;//cannot overwrite slick slider styles
     }
     .container_text {
         h1 {
             .lib-font-size(30px);
+
+            &.oswald{
+                .lib-font-size(@font-size-large);
+            }
         }
         h6 {
             .lib-font-size(@font-size__s);
@@ -686,6 +752,14 @@
     .container_text {
         h1 {
             .lib-font-size(23px);
+
+            &.oswald{
+                .lib-font-size(16px);
+
+                span{
+                    .lib-font-size(22px);
+                }
+            }
         }
         h6 {
             .lib-font-size(@font-size-small);
@@ -792,11 +866,19 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     //----------------Main Banner---------------
     .container {
-        width: 80%;
+        width: 80% !important;//cannot overwrite slick slider styles
     }
     .container_text {
         h1 {
             .lib-font-size(@font-size-large);
+
+            &.oswald{
+                .lib-font-size(16px);
+
+                span{
+                    .lib-font-size(22px);
+                }
+            }
         }
     }
 
@@ -834,7 +916,14 @@
 
 
     //------Bestsellers/Features/Most Viewed------
-
+    .products-group{
+        .group_item{
+            .slick-arrow{
+                opacity:1;
+                visiblity:visible;
+            }
+        }
+    }
 
 
     //----------------News & Blog---------------
@@ -858,6 +947,13 @@
         width: 100%;
         .lib-vendor-box-align(center);
         text-align: center;
+
+        h1 {
+            &.oswald{
+                .lib-font-size(@font-size__l);
+            }
+        }
+
         img {
             display: block;
             width: 135px;
@@ -947,6 +1043,14 @@
 
 
     //------Bestsellers/Features/Most Viewed------
+    .products_group {
+        .group_item{
+            .slick-arrow{
+                opacity:1;
+                visibility: visible;
+            }
+        }
+    }
 
 
 
@@ -971,6 +1075,14 @@
         h1 {
             .lib-font-size(19px);
             margin-bottom: @indent__xs;
+
+            &.oswald{
+                .lib-font-size(16px);
+
+                span{
+                    .lib-font-size(@font-size-large);
+                }
+            }
         }
     }
 
@@ -1014,7 +1126,6 @@
 
 
     //------Bestsellers/Features/Most Viewed------
-
 
 
     //----------------News & Blog---------------

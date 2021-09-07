@@ -1,0 +1,57 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    .link{
+        &.wishlist{
+            padding-right:@indent__base;
+
+            a{
+                color: @color-elogic-black;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl){
+    //------------------Header-------------------
+
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
+    //------------------Header-------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    //------------------Header-------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    //----------------Header------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    //------------------Header-------------------
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    //----------------Footer Newsletter----------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
+    //------------------Footer Newsletter-------------------
+
+}

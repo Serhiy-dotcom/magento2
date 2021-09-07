@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_width" xsi:type="number">170</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceContainer name="header-wrapper">
+            <container name="menu.navi" htmlClass="menu navi" htmlTag="div">
+                <block class="Magento\Framework\View\Element\Template" name="wish.list" template="Magento_Wishlist::link.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="footer-container">
+            <block class="Magento\Cms\Block\Block" name="footer_navigation">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">27</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::scripts.phtml"/>
+        </referenceContainer>
+
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceContainer name="copyright" remove="true"/>
+
+        <move element="form.subscribe" destination="footer-container" before="-"/>
+
+        <move element="navigation.sections" destination="header-wrapper" after="logo"/>
+
+        <move element="authorization-link" destination="menu.navi" before="-"/>
+        <move element="minicart" destination="menu.navi" before="top.search"/>
+        <move element="top.search" destination="menu.navi" after="-"/>
+    </body>
+</page>

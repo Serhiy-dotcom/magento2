@@ -1,0 +1,25 @@
+<?php
+/*
+Added heart icon
+*/
+?>
+
+<li class="link wishlist" data-bind="scope: 'wishlist'">
+    <a <?= /* @noEscape */ $block->getLinkAttributes() ?>><?= $block->escapeHtml($block->getLabel()) ?>
+        <i class="far fa-heart"></i>
+    </a>
+</li>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            }
+        }
+    }
+
+</script>

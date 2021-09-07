@@ -1,0 +1,104 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    .menu.navi{
+        .minicart-wrapper{
+            margin:0;
+            padding-right:@indent__base;
+
+            .action{
+                &.showcart{
+                    cursor:pointer;
+
+                    &::before{
+                        display:none;
+                    }
+
+                    .text{
+                        border: 0;
+                        clip: auto;
+                        height: auto;
+                        margin: 0;
+                        overflow: visible;
+                        padding: 0;
+                        position: unset;
+                        width: max-content;
+                        color: @color-elogic-black;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        font-size: @font-size__s;
+                        font-weight: @font-weight__lighter;
+                        transition:color 0.1s linear;
+
+                        &:hover{
+                            color:@color-elogic-icon-gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl){
+    //------------------Header-------------------
+
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
+    //------------------Header-------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    //------------------Header-------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    //----------------Header------------------
+    .header{
+        .menu{
+            &.navi{
+                .minicart-wrapper{
+                    .action{
+                        &.showcart{
+                            .text{
+                                font-size:0;
+
+                                &::before{
+                                    content:"\f07a";
+                                    font-family:@font-family-awesome;
+                                    font-size:16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    //------------------Header-------------------
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    //----------------Footer Newsletter----------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
+    //------------------Footer Newsletter-------------------
+
+}

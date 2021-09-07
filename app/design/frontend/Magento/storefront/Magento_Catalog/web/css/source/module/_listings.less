@@ -946,6 +946,69 @@
             }
         }
     }
+
+    .pages{
+        .items{
+            display:flex;
+            align-items:center;
+        }
+
+        .item{
+            .page{
+                display: inline-block;
+                width: 30px;
+                height: 36px;
+                text-align: center;
+                line-height: 36px;
+                background-color: #eee;
+                border: 0;
+                color: #222;
+                font-weight: 400;
+                font-size: 15px;
+                transition: all 0.2s linear;
+
+                &:hover{
+                    background-color:#222;
+                    color:#fff;
+                }
+            }
+
+            &.current{
+                .page{
+                    background-color:#222;
+                    color:#fff;
+                }
+            }
+
+            .action{
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                text-align: center;
+                line-height: 36px;
+                background-color: #eee;
+                color: #222;
+                font-weight: 400;
+                border-radius: 0;
+                border: none;
+                padding: 0;
+                transition: all 0.2s linear;
+
+                &::before{
+                    content:'\f105';
+                    font-family:@font-family-awesome;
+                }
+
+                &:hover{
+                    background-color: #222;
+
+                    &::before{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //

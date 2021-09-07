@@ -6,6 +6,7 @@
                 <width>400</width>
                 <height>480</height>
             </image>
+
             <image id="new_products_content_widget_grid" type="small_image">
                 <width>400</width>
                 <height>480</height>
@@ -25,3 +26,4 @@
         </images>
     </media>
 </view>
+

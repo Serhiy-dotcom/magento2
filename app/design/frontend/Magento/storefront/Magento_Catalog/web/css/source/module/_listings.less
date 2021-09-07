@@ -1103,6 +1103,32 @@
                 margin: 0 auto @indent__m * 2;
             }
         }
+
+        &.product-list-items{
+            .item{
+                .product-item-info{
+                    width:100%;
+                    flex-direction: column;
+                    margin: 0 auto;
+                    justify-content: center;
+                    align-items: center;
+
+                    > .product-item-photo{
+                        max-width:unset;
+                    }
+
+                    .product-item-details{
+                        width: 100%;
+                        margin-top: 20px;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .toolbar-products{
+        margin-bottom: 20px;
     }
 }
 

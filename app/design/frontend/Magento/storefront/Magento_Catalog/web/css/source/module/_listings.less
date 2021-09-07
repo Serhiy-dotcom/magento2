@@ -25,6 +25,36 @@
     //-----------Common------------
     .product-item-photo{
         opacity:1;
+      
+    //  Product Lists
+    .product-items{
+        .lib-vendor-prefix-display(flex);
+        justify-content: space-between;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .product-item{
+        text-align:center;
+        width: 24%;
+        min-width: 100px;
+        height: max-content;
+        padding: 0 10px;
+
+        a{
+            display: inline-block;
+            width: 100%;
+
+            .product-image-container{
+                //I use !important because this class have element style which I can't overwrite no matter how many nestings I do
+                width:100% !important;
+            }
+        }
+    }
+
+    .product-item-details{
+        margin: 25px 0 0;
+        text-align: center;
     }
 
     .product-item-link,

@@ -1,0 +1,89 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    .link{
+        &.authorization-link{
+            list-style: none;
+            text-transform: uppercase;
+            padding-right:@indent__base;
+
+            a{
+                color: @color-elogic-black;
+                text-decoration: none;
+                font-weight:@font-weight__lighter;
+                font-size:@font-size__s;
+                transition:color 0.1s linear;
+
+                &:hover{
+                    color:@color-elogic-icon-gray;
+                }
+            }
+        }
+    }
+
+    .menu{
+        &.navi{
+            list-style: none;
+            .lib-vendor-prefix-display(flex);
+        }
+    }
+}
+
+
+
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl){
+    //------------------Header-------------------
+
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
+    //------------------Header-------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    //------------------Header-------------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    //----------------Header------------------
+    .menu{
+        &.navi{
+            .link{
+                &.authorization-link{
+                    a{
+                        font-size:0;
+
+                        &::before{
+                            content:"\f2c0";
+                            font-family:@font-family-awesome;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    //------------------Header-------------------
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    //----------------Footer Newsletter----------------
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
+    //------------------Footer Newsletter-------------------
+
+}

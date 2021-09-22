@@ -1,0 +1,165 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    //--------------Common-------------
+    .product-social-links{
+        .add-to-giftr{
+            .giftr-link{
+                .action{
+                    height: 50px;
+                    width: 50px;
+                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-prefix-justify-content(center);
+                    .lib-vendor-box-align(center);
+                    background-color: @color-elogic-secondary-white;
+                    margin-top: @indent__base;
+                    text-decoration:none;
+                    transition:all 0.2s linear;
+                    cursor:pointer;
+
+                    &:hover{
+                        background-color:@color-elogic-black;
+
+                        &::before{
+                            color:@color-elogic-secondary-white;
+                        }
+                    }
+
+                    &::before{
+                        content:'\f06b';
+                        font-family:@font-family-awesome;
+                        .lib-font-size(@font-size-large);
+                        color: @color-elogic-black;
+                        transition:all 0.2s linear;
+                    }
+
+                    >span{
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+
+
+    //Select
+    .modal-popup{
+        &.modal-giftr{
+            &._show{
+                .modal-inner-wrap{
+                    top: 45%;
+                    left: 50%;
+                    transform: translate3d(-50%,-50%, 0);
+                    margin:0;
+                    width:auto;
+                }
+
+                .modal-footer{
+                    display:none;
+                }
+
+                .options-container{
+                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-prefix-flex-direction(column);
+                    background: #2f3640;
+                    color: #f5f6fa;
+                    max-height: 0;
+                    width: 100%;
+                    opacity: 0;
+                    transition: all 0.4s;
+                    border-radius: 8px;
+                    overflow: hidden;
+
+                    order: 1;
+
+                    &.active{
+                        max-height: 240px;
+                        opacity: 1;
+                    }
+
+                    &::-webkit-scrollbar{
+                        display:none;
+                    }
+                }
+
+                .option{
+                    &:hover{
+                        background: #414b57;
+                    }
+
+                    span{
+                        cursor: pointer;
+                    }
+
+                    input{
+                        opacity:0;
+                        visibility:hidden;
+                    }
+                }
+
+                .option,
+                .selected{
+                    padding: 12px 24px;
+                    cursor: pointer;
+                }
+
+                .title__giftr{
+                    text-align: center;
+                    margin-bottom: @indent__base;
+                    .lib-font-size(22px);
+                }
+
+                .selected{
+                    background: #2f3640;
+                    border-radius: 8px;
+                    margin-bottom: 8px;
+                    color: #f5f6fa;
+                    position: relative;
+
+                    order: 0;
+
+                    &::after{
+                        content: "\f078";
+                        font-family:@font-family-awesome;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        transform: rotate(0deg);
+
+                        position: absolute;
+                        height: auto;
+                        width: auto;
+                        right: 20px;
+
+                        transition: all 0.4s;
+                    }
+
+                    &.rotateArrow{
+                        &::after{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                #confirm-add-to-registry{
+                    margin: @indent__base auto 0;
+                    display: block;
+                    width: max-content;
+                    cursor: pointer;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: @color-elogic-primary-white;
+                    background-color: @color-elogic-black;
+                    padding: @indent__xs * 3 @indent__m;
+                    font-weight: @font-weight__medium;
+                }
+            }
+        }
+    }
+}
+
+
+
+//  Desktop
+//  _____________________________________________
+

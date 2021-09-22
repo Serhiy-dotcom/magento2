@@ -982,6 +982,69 @@
             }
         }
     }
+
+    .pages{
+        .items{
+            display:flex;
+            align-items:center;
+        }
+
+        .item{
+            .page{
+                display: inline-block;
+                width: 30px;
+                height: 36px;
+                text-align: center;
+                line-height: 36px;
+                background-color: #eee;
+                border: 0;
+                color: #222;
+                font-weight: 400;
+                font-size: 15px;
+                transition: all 0.2s linear;
+
+                &:hover{
+                    background-color:#222;
+                    color:#fff;
+                }
+            }
+
+            &.current{
+                .page{
+                    background-color:#222;
+                    color:#fff;
+                }
+            }
+
+            .action{
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                text-align: center;
+                line-height: 36px;
+                background-color: #eee;
+                color: #222;
+                font-weight: 400;
+                border-radius: 0;
+                border: none;
+                padding: 0;
+                transition: all 0.2s linear;
+
+                &::before{
+                    content:'\f105';
+                    font-family:@font-family-awesome;
+                }
+
+                &:hover{
+                    background-color: #222;
+
+                    &::before{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //
@@ -1076,6 +1139,32 @@
                 margin: 0 auto @indent__m * 2;
             }
         }
+
+        &.product-list-items{
+            .item{
+                .product-item-info{
+                    width:100%;
+                    flex-direction: column;
+                    margin: 0 auto;
+                    justify-content: center;
+                    align-items: center;
+
+                    > .product-item-photo{
+                        max-width:unset;
+                    }
+
+                    .product-item-details{
+                        width: 100%;
+                        margin-top: 20px;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .toolbar-products{
+        margin-bottom: 20px;
     }
 }
 
@@ -1090,7 +1179,7 @@
         .product-items{
             .product-item{
                 width:42%;
-                padding:0 @indent__s;
+                padding:0;
             }
         }
 

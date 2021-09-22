@@ -3,15 +3,19 @@
 //  _____________________________________________
 & when (@media-common = true) {
     //--------------Common-------------
-    .page-wrapper{
-        overflow-x: hidden;
+    .cms-home{
+        .page-wrapper{
+            overflow-x: hidden;
 
-        .page-main{
-            max-width: 1920px;
-            padding-left:0;
-            padding-right:0;
-            .block{
-                margin-bottom:0;
+            .page-main{
+                max-width: 1920px;
+                padding-left:0;
+                padding-right:0;
+                width:-moz-available;
+
+                .block{
+                    margin-bottom:0;
+                }
             }
         }
     }
@@ -77,6 +81,7 @@
         width: 100vw;
         display: flex;
         align-items: center;
+        max-width:1920px;
     }
     .container {
         margin: 0 auto;
@@ -163,7 +168,6 @@
 
     //----------------Categories---------------
     .categories {
-        width: 100vw;
         max-width: 1920px;
     }
     .categories_container {
@@ -282,7 +286,7 @@
         height: 146px;
         max-width: 1310px;
         background-size: cover;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.05)), url("https://i.ibb.co/Qms181R/Screenshot-2021-07-30-at-12-16-18-kare-k83990-624068820-800x800w-jpg-JPEG-Image-699-800-pixels.png");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.05)), url("http://magento2.loc/media/wysiwyg/Screenshot_2021-09-10_at_10-22-10_Screenshot-2021-07-30-at-12-16-18-kare-k83990-624068820-800x800w-jpg-JPEG-Image-699-800-p_..._.png");
         background-position-y: -285px;
     }
     .sale_text {
@@ -467,6 +471,14 @@
                 color: @color-elogic-nav-hover;
             }
         }
+    }
+
+
+
+
+    //----------------Sidebar Slider---------------
+    .sidebar-slider{
+        margin: @indent__xl 0;
     }
 
 }
@@ -881,7 +893,7 @@
         .lib-vendor-box-align(center);
     }
     .cat_elem {
-        padding: 0 @indent__xs * 3 @indent__s 0;
+        padding: 0;
         width: 85%;
         &:first-child {
             margin-bottom: @indent__s * 2;
@@ -896,10 +908,10 @@
     }
 
     .products_header{
-        padding: 0 0 0 35px;
+        padding: 0;
 
         &::after{
-            left:35px;
+            left:0;
         }
     }
 
@@ -995,14 +1007,6 @@
         right: 30px;
     }
 
-    .products_header{
-        padding: 0 0 0 @indent__m;
-
-        &::after{
-            left:25px;
-        }
-    }
-
 
     //----------------November Sale---------------
     .sale_bg {
@@ -1082,7 +1086,7 @@
 
     //----------------Categories---------------
     .cat_elem{
-        width:93%;
+        width:100%;
     }
 
 

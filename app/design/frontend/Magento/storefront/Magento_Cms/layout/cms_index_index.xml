@@ -3,5 +3,9 @@
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" name="scripts.cms" template="Magento_Cms::js.phtml" after="-"/>
         </referenceContainer>
+
+        <referenceBlock name="form.subscribe" remove="false"/>
+
+        <move element="form.subscribe" destination="footer-container" before="-"/>
     </body>
 </page>

@@ -25,6 +25,8 @@ define([
         _create: function() {
             var currentElement = $(this.element);
 
+            $(currentElement).collapsible(this.options.collapsibleOptions);
+
             mediaCheck({
                 media: '(min-width: 767px)',
                 entry: function () {

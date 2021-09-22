@@ -3,13 +3,13 @@
     <media>
         <images module="Magento_Catalog">
             <image id="hover_product_list" type="group_product_hover">
-                <width>400</width>
-                <height>480</height>
+                <width>640</width>
+                <height>794</height>
             </image>
 
             <image id="new_products_content_widget_grid" type="small_image">
-                <width>400</width>
-                <height>480</height>
+                <width>640</width>
+                <height>794</height>
             </image>
             <image id="category_page_grid" type="small_image">
                 <width>640</width>

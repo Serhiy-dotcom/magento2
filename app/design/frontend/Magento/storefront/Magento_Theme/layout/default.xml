@@ -28,7 +28,7 @@
         <referenceBlock name="footer_links" remove="true"/>
         <referenceContainer name="copyright" remove="true"/>
 
-        <move element="form.subscribe" destination="footer-container" before="-"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
 
         <move element="navigation.sections" destination="header-wrapper" after="logo"/>
 
